@@ -171,6 +171,7 @@ main .container .flex-elements .right-reset form .box-input .inputbx{
     font-weight: bold;
     transition: border 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .inputbx input[type="button"]:hover {
@@ -180,6 +181,20 @@ main .container .flex-elements .right-reset form .box-input .inputbx{
     box-shadow: 0 0 15px rgba(179, 149, 237, 0.9); 
 }
 
+main form .reset-senha{
+    color: white;
+    margin-bottom: 20px;
+}
+
+main form .reset-senha a{
+    color: rgb(179, 149, 220);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+main form .reset-senha a:hover{
+    color: rgb(96, 76, 126);
+}
 
 @media screen and (max-width:870px){
     main .container .flex-elements{
@@ -230,11 +245,36 @@ main .container .flex-elements .right-reset form .box-input .inputbx{
     height: 27.4px;
 }
 
+main form .reset-senha{
+    font-size: 14px;
+}
+
 }
 
 
 @media screen and (max-width:400px){
     #reset,#voltar{
         font-size: 20px;
+    }
+
+    .headerbx {
+        width: 100%;
+    }
+
+    .headerbx h2 {
+        font-size: 25px;
+        color: #e6e8f0;
+        margin: 0;
+    }
+    
+    .headerbx p {
+        font-size: 12px;
+        color: #fff;
+        margin: 0;
+        line-height: 20px
+    }
+
+    main form .reset-senha{
+        font-size: 12px;
     }
 }
