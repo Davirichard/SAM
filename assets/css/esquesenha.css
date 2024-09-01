@@ -38,7 +38,8 @@ main .container .flex-elements .right-reset{
 }
 
 .headerbx {
-    margin: 50px 0;
+    margin: 50px auto;
+    width: 90%;
 }
 
 
@@ -46,12 +47,16 @@ main .container .flex-elements .right-reset{
     font-size: 40px;
     color: #e6e8f0;
     margin: 0;
+    text-align: center;
 }
 
 .headerbx p {
-    font-size: 15px;
+    font-size: 13px;
     color: #fff;
     margin: 0;
+    line-height: 27px;
+    width: 100%;
+    text-align: center;
 }
 
 main .container .flex-elements .right-reset form{

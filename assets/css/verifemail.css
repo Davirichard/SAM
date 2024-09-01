@@ -28,17 +28,36 @@ main .container .flex-elements .left-img{
     width: 50%;
     min-height: 600px;
     height: 100vh;
-    background-image: url(../img/fundo.png);
-    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-main .container .flex-elements .right-reset{
+
+main .container .flex-elements .left-img img{
+    margin: 0 auto;
+}
+
+@keyframes float{
+	0%,100%{
+		transform:translatey(0)
+	}
+	50%{
+		transform:translatey(-30px)
+	}
+}
+main .container .flex-elements .left-img img {
+     animation: float 2s ease-in-out infinite;
+}
+
+
+main .container .flex-elements .right-verif{
     width: 50%;
     height: auto;
 }
 
 .headerbx {
-    margin: 50px 0;
+    margin: 30px 0;
 }
 
 
@@ -54,21 +73,19 @@ main .container .flex-elements .right-reset{
     margin: 0;
 }
 
-main .container .flex-elements .right-reset form{
-    width: 90%;
-    margin: 0 auto;
+main .container .flex-elements .right-verif form .inputbx span{
+    font-size: 10px;
+    color: #fff;
+    font-weight: 300;
 }
 
-main .container .flex-elements .right-reset form .box-input .inputbx{
-    height: auto;
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0) inset;
-    border-radius: 8px;
-    background-color: rgba(245, 245, 245, 0.26);
-    margin-bottom: 30px;
-    margin-top: 5px;
+
+main .container .flex-elements .right-verif form{
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
 }
+
 
 .box-input span {
     width: 100%;
@@ -96,34 +113,6 @@ main .container .flex-elements .right-reset form .box-input .inputbx{
     border: none;
 }
 
-.inputbx ::placeholder{
-    width: 142px;
-    position: relative;
-    font-size: 10px;
-    line-height: 100%;
-    font-weight: 300px;
-    font-family: Poppins;
-    color: #b4aeae;
-    text-align: left;
-    display: inline-block;
-    font-weight: initial;
-}
-
-.inputbx input:focus {
-    color: white; 
-    outline: none; 
-}
-
-
-.inputbx i {
-    color: #a7a1a1; 
-    font-size: 20px; 
-    cursor: pointer;
-    position: relative;
-    left: -20px;
-}
-
-
 
 /* Botão de login */
 .inputbx input[type="submit"] {
@@ -142,6 +131,7 @@ main .container .flex-elements .right-reset form .box-input .inputbx{
     transition: border 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 30px;
     width: 100%;
+    margin-top: 10px;
 }
 
 .inputbx input[type="submit"]:hover {
@@ -186,10 +176,14 @@ main .container .flex-elements .right-reset form .box-input .inputbx{
         width: 100%;
         min-height: 400px;
         height: 400px;
-        background-position: center;
     }
 
-    main .container .flex-elements .right-reset{
+    main .container .flex-elements .left-img img {
+        width: 400px;
+        
+   }
+
+    main .container .flex-elements .right-verif{
         width: 100%;
         height: auto;
     }
@@ -214,22 +208,47 @@ main .container .flex-elements .right-reset form .box-input .inputbx{
     margin: 0;
 }
 
-.box-input span {
-    width: 100%;
-    font-size: 14px;
-    line-height: 20px;
-    font-family: 'poppins';
-    color: #fff;
-    text-align: left;
-    display: inline-flexbox;
-    height: 27.4px;
-}
-
 }
 
 
 @media screen and (max-width:400px){
-    #reset,#voltar{
+
+    main .container .flex-elements .left-img{
+        width: 100%;
+        min-height: 300px;
+        height: 300px;
+    }
+
+    main .container .flex-elements .left-img img {
+        width: 80%;
+        
+   }
+
+
+       
+.headerbx h2 {
+    font-size: 20px;
+}
+
+.headerbx p {
+    font-size: 12px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.headerbx span {
+    font-size: 10px;
+    color: #fff;
+}
+
+    #enviar,#voltar{
         font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width:350px){
+    #enviar,#voltar{
+        font-size: 15px;
     }
 }
