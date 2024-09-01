@@ -314,7 +314,7 @@ main .container .flex-elements .right-reset form .criar-conta a{
     }
 }
 
-@media screen and (max-width:350px){
+@media screen and (max-width:370px){
     .headerbx h2{
         font-size: 30px;
     }
