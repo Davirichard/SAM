@@ -254,8 +254,8 @@ main .container .flex-elements .right-verif form{
 }
 
 
-@media screen and (max-width:350px){
+@media screen and (max-width:370px){
     #enviar,#voltar{
-        font-size: 15px;
+        font-size: 18px;
     }
 }

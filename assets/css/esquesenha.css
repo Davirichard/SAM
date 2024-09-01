@@ -279,3 +279,15 @@ main form .reset-senha{
         font-size: 12px;
     }
 }
+
+@media screen and (max-width:370px){
+
+    #enviar,#voltar{
+        font-size: 18px;
+    }
+
+    .headerbx p{
+        margin-top: 10px;
+        font-size: 10.5px;
+    }
+}
