@@ -184,6 +184,7 @@ main .container .flex-elements .right-reset form .box-input .inputbx{
 main form .reset-senha{
     color: white;
     margin-bottom: 20px;
+    font-size: 12px;
 }
 
 main form .reset-senha a{
