@@ -93,7 +93,7 @@ body {
 /*search*/
 .navbar .navbar-search {
     width: 100%;
-    background-image: url('../img/search.svg');
+    background-image: url('../../img/home/logo/search.svg');
     background-repeat: no-repeat;
     background-color: var(--light-green);
     background-position: center;
@@ -174,7 +174,7 @@ body {
     /* max-width: 70px; */
     border-radius: 5px;
     height: auto; 
-    background-image: url(../imagens/coqui-chang-tnUp0OLSkDg-unsplash.jpg);
+    background-image: url(../../img/home/coqui-chang-tnUp0OLSkDg-unsplash.jpg);
     background-size: cover;
 }
 
