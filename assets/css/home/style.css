@@ -20,11 +20,11 @@ a{
 header{
     width: 100%;
     height: 65px;
-    background-color: #3C2158;
-    position: fixed;
-    z-index: 999;
+    background-color: #3c2158;
+    z-index: 998;
     display: flex;
     align-items: center;
+    position: fixed;
 }
 
 header .logo-sam{
@@ -37,66 +37,18 @@ header .logo-sam img{
     margin-left: 10px;
 }
 
-aside{
-    height: 100vh;
-    background-color: #3C2158;
-    position: fixed;
-    z-index: 998;
-    padding: 50px 0;
-    overflow: auto;
-}
-
-
-/* Barra de rolagem geral */
-::-webkit-scrollbar {
-    width: 12px; /* Largura da barra de rolagem vertical */
-    height: 12px; /* Altura da barra de rolagem horizontal */
-    display: none;
-}
-
-aside .sidebar{
-    width: 65px;
-    height: auto;
-}
-
-
-aside .sidebar .navbar ul li{
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-}
-
-aside .sidebar .navbar ul li a{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-aside .sidebar .navbar ul li a img{
-    transition: 0.5s;
-    margin: 20px 0;
-}
-
-aside .sidebar .navbar ul li a img:hover{
-    opacity: 0.6;
-}
-
-aside .sidebar .navbar{
-    padding: 40px 0;
-}
-
 
 main{
     width: 100%; 
     height: auto; 
     background-color: #EDEBF9; 
     padding: 70px;
+    margin-top: 65px;
 }
 
 main .container{
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 70px;
 }
 
 main .box-welcome{

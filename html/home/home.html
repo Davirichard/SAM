@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../../assets/css/home/style.css">
     <link rel="stylesheet" href="../../assets/css/home/sidebar.css">
     <link rel="icon" href="../../assets/img/icone_logo 1.png" type="image/png"> <!-- Ícone da aba do navegador -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 
      <!--==== Box-icons ====-->
@@ -14,86 +16,98 @@
 </head>
 <body>
     <header>
-        <div class="logo-sam"><img src="../../assets/img/home/logo/Mask group.png" alt=""></div>
-        <div class="box-search" style="margin: 0 auto;"><input type="text" style="margin: 0 auto;"></div>
+        <!-- <div class="logo-sam"><img src="../../assets/img/home/logo/Mask group.png" alt=""></div> -->
+        <div class="box-search" style="margin: 0 auto;"><i class='bx bxs-search-alt-2'></i><input type="text" style="margin: 0 auto;"></div>
     </header>
-    <div class="global-container">
+    <div class="global-container" style="background-color:  yellowgreen;">
         <aside>
             <div class="sidebar">
                         <!--aside bar-->
-        <nav class="navbar">            
-            <div class="navbar-container">
-                <!--logo div-->
-                <div class="navbar-logo-div">
-                    <a class="navbar-logo-link" href="#" style="color: white;">SAM</a>
-                    <button class="navbar-toggler"><i class='bx bx-menu bx-rotate-180'  style="color: white; font-size: 35px;"></i></button>
-                </div>
-
-                <!--search input-->
-                <input type="search" name="search" placeholder="Buscar"
-                 class="navbar-search" id="search">
-
-                <!--item list-->
-                <ul class="menu-list">   
-                    <li class="menu-item">                        
-                        <a class="menu-link" href="#"> 
-                            <img src="../../assets/img/home/logo/gestao-de-dados (3) 1.png" title="Dashboard" class="menu-icon" alt="grid">
-                            <span class="menu-link-text">Gestão Acadêmica</span>                            
-                        </a>
-                    </li>
-                    <li class="menu-item">                        
-                        <a class="menu-link" href="#">
-                            <img src="../../assets/img/home/logo/sala-de-aula (3) 1.png" title="Pets" class="menu-icon" alt="pet">
-                            <span class="menu-link-text">Gestão de professores</span>    
-                        </a>
-                    </li>
-                    <li class="menu-item">                        
-                        <a class="menu-link" class="menu-link" href="#">
-                            <img src="../../assets/img/home/logo/graduacao (2) 1.png" title="Clientes" class="menu-icon" alt="user">
-                            <span class="menu-link-text">Administração de cursos</span>    
-                        </a>
-                    </li>
-                    <li class="menu-item">                            
-                        <a class="menu-link" href="#">
-                            <img src="../../assets/img/home/logo/conta-de-usuario (2) 1.png" title="Vets" class="menu-icon" alt="vet">
-                            <span class="menu-link-text">Gerenciamento de usuários</span>    
-                        </a>
-                    </li>
-                    <li class="menu-item">                        
-                        <a class="menu-link" href="#">
-                            <img src="../../assets/img/home/logo/comunicar (2) 1.png" title="Ajustes" class="menu-icon" alt="settings" style="font-size: 40px;">
-                            <span class="menu-link-text">Comunicação e Anúncios</span>    
-                        </a>
-                    </li>
-                    <li class="menu-item">                            
-                        <a class="menu-link" href="#">
-                            <img src="../../assets/img/home/logo/processo (2) 2.png" title="Vets" class="menu-icon" alt="vet" style="font-size: 40px;">
-                            <span class="menu-link-text">Processos administrativos</span>    
-                        </a>
-                    </li>
-                    <li class="menu-item">                        
-                        <a class="menu-link" href="#">
-                            <img src="../../assets/img/home/logo/aumentar (2) 1.png" title="Ajustes" class="menu-icon" alt="settings" style="font-size: 40px;">
-                            <span class="menu-link-text">Informações financeiras</span>    
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <!--div user info-->
-            <div class="user-container">
-                <div class="user-info">
-                    <img class="user-img" src="../../assets/img/home/coqui-chang-tnUp0OLSkDg-unsplash.jpg" alt="photo">
-                    <div class="user-details">
-                        <h3 class="user-name">Eleanor Pena</h3>
-                        <p class="user-occupation">Veterinária</p>
-                    </div>
-                </div>
-                <a class="logout-btn" href="#">
-                    <i class='bx bx-log-out logout-img' style="font-size: 35px; color: white;"></i>
-                </a>
-            </div>
-        </nav>
+                        <nav id="sidebar">
+                            <div id="sidebar_content">
+                                <div id="user">
+                                    <img src="../../assets/img/home/coqui-chang-COP.jpg" id="user_avatar" alt="Avatar">
+                        
+                                    <p id="user_infos">
+                                        <span class="item-description">
+                                            Fulano de Tal
+                                        </span>
+                                        <span class="item-description">
+                                            Lorem Ipsum
+                                        </span>
+                                    </p>
+                                </div>
+                        
+                                <ul id="side_items">
+                                    <li class="side-item active">
+                                        <a href="#">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                            <span class="item-description">
+                                                Dashboard
+                                            </span>
+                                        </a>
+                                    </li>
+                        
+                                    <li class="side-item">
+                                        <a href="#">
+                                            <i class="fa-solid fa-user"></i>
+                                            <span class="item-description">
+                                                Usuários
+                                            </span>
+                                        </a>
+                                    </li>
+                        
+                                    <li class="side-item">
+                                        <a href="#">
+                                            <i class="fa-solid fa-bell"></i>
+                                            <span class="item-description">
+                                                Notificações
+                                            </span>
+                                        </a>
+                                    </li>
+                        
+                                    <li class="side-item">
+                                        <a href="#">
+                                            <i class="fa-solid fa-box"></i>
+                                            <span class="item-description">
+                                                Produtos
+                                            </span>
+                                        </a>
+                                    </li>
+                        
+                                    <li class="side-item">
+                                        <a href="#">
+                                            <i class="fa-solid fa-image"></i>
+                                            <span class="item-description">
+                                                Imagens
+                                            </span>
+                                        </a>
+                                    </li>
+                        
+                                    <li class="side-item">
+                                        <a href="#">
+                                            <i class="fa-solid fa-gear"></i>
+                                            <span class="item-description">
+                                                Configurações
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                        
+                                <button id="open_btn">
+                                    <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
+                    
+                            <div id="logout">
+                                <button id="logout_btn">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                    <span class="item-description">
+                                        Logout
+                                    </span>
+                                </button>
+                            </div>
+                        </nav>
             </div>
         </aside>
         <main>
