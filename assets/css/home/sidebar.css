@@ -9,7 +9,6 @@
 
 body {
     min-height: 100vh;
-    background-color: #e3e9f7;
 }
 
 
@@ -17,14 +16,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #ffffff;
+    background-color: #28163a;
     height: 100vh;
     border-radius: 0px 18px 18px 0px;
     position: fixed;
     transition: all .5s;
     min-width: 82px;
     z-index: 9999;
-}
+    box-shadow: rgba(0, 0, 0, 0.514) 0px 3px 8px;}
 
 #sidebar_content {
     padding: 12px;
@@ -35,6 +34,7 @@ body {
     align-items: center;
     gap: 8px;
     margin-bottom: 24px;
+    color: white;
 }
 
 #user_avatar {
@@ -50,7 +50,7 @@ body {
 }
 
 #user_infos span:last-child {
-    color: #6b6b6b;
+    color: white;
     font-size: 12px;
 }
 
@@ -81,7 +81,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0a0a0a;
+    color: white;
 }
 
 .side-item.active a {
@@ -94,11 +94,13 @@ body {
     justify-content: center;
     width: 20px;
     height: 20px;
+    color: white;
 }
 
 #logout {
     border-top: 1px solid #e3e9f7;
     padding: 12px;
+    color: white;
 }
 
 #logout_btn {
@@ -112,6 +114,7 @@ body {
     text-align: start;
     cursor: pointer;
     background-color: transparent;
+    color: white;
 }
 
 #open_btn {
@@ -157,13 +160,4 @@ body {
 #sidebar.open-sidebar .side-item a {
     justify-content: flex-start;
     gap: 14px;
-}
-
-
-@media (min-height: 500px) {
-    
-    #sidebar {
-        min-height: 850px
-    }
-    
 }
