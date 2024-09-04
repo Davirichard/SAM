@@ -42,8 +42,9 @@ main{
     width: 100%; 
     height: auto; 
     background-color: #EDEBF9; 
-    padding: 70px;
+    padding: 50px 40px;
     margin-top: 65px;
+    margin-left: 82px;
 }
 
 main .container{
@@ -98,6 +99,7 @@ main .box-visao-geral .flex-visao-geral{
 
 main .box-visao-geral .flex-visao-geral .content-visao{
     width: 33.3%;
+    min-width: 200px;
     height: auto;
     background-color: #3C2158;
     border-radius: 20px;
@@ -121,6 +123,14 @@ main .box-visao-geral .flex-visao-geral .content-visao .visao-elements{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+main .box-visao-geral .flex-visao-geral .content-visao .visao-elements #img1{
+    width: 35px;
+}
+
+main .box-visao-geral .flex-visao-geral .content-visao .visao-elements #img2,#img3{
+    width: 60px;
 }
 
 main .box-visao-geral .flex-visao-geral .content-visao .visao-elements h4{
@@ -202,12 +212,13 @@ main .box-registro .box-flex-registro .registro h2{
 }
 
 main .box-registro .box-flex-registro table{
-    width: 90%;
+    width: 100%;
 }
 
 
 main .box-registro .box-flex-registro table,tr,th,td{
     text-align: center;
+    border: 1px solid orange;
 }
 
 main .box-registro .box-flex-registro td{
@@ -221,6 +232,145 @@ main .box-registro .box-flex-registro td{
         margin: 0 auto;
     }
 }
+
+@media screen and (max-width:970px){
+
+    
+/* main .box-visao-geral .flex-visao-geral .content-visao .visao-elements #img1{
+    width: 25px;
+}
+
+main .box-visao-geral .flex-visao-geral .content-visao .visao-elements #img2,#img3{
+    width: 50px;
+}
+    
+main .box-visao-geral .flex-visao-geral .content-visao .visao-elements h4{
+    color: white;
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+main .box-visao-geral .flex-visao-geral .content-visao p{
+    font-size: 14px;
+    margin-top: 10px;
+} */
+
+}
+
+@media screen and (max-width:1100px){
+    main{
+        padding: 50px 20px;
+    }
+}
+
+
+@media screen and (max-width:920px){
+    main .box-visao-geral h2{
+        margin-bottom: 0;
+    }
+
+    
+    main .box-visao-geral .flex-visao-geral{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    main .box-visao-geral .flex-visao-geral .content-visao{
+        width: 49%;
+        min-width: 100px;
+        margin-top: 20px;
+        flex-wrap: nowrap;
+        justify-content:space-around ;
+    }
+
+    main .box-visao-geral .flex-visao-geral #content-visao01{
+        margin-left: 0;
+    }
+
+
+    main .box-visao-geral .flex-visao-geral #content-visao02{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+    main .box-visao-geral .flex-visao-geral #content-visao03{
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+
+    main .box-registro .box-flex-registro{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main .box-registro .box-flex-registro .grafico{
+        width: 100%;
+        min-width: 300px;
+        height: auto;
+        background-color: white;
+        padding: 20px;
+        margin: 20px 0;
+    }
+    
+    main .box-registro .box-flex-registro .grafico h2{
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        position: relative;
+        top: 0;
+    }
+    
+    main .box-registro .box-flex-registro .grafico span{
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        position: relative;
+        bottom: 0;
+    }
+    
+    main .box-registro .box-flex-registro .grafico img{
+        width:50%;
+        position: relative;
+        top: -10px;
+    }
+    
+    
+    main .box-registro .box-flex-registro .registro{
+        width: 100%;
+        height: auto;
+        background-color: white;
+        margin-left: 0;
+        margin-top: 20px;
+        border-radius: 10px;
+        color: #3C2158;
+        padding: 20px 20px 50px 20px;
+    }
+}
+
+
+@media screen and (max-width:660px){
+    main .box-visao-geral .flex-visao-geral .content-visao{
+        width: 100%;
+    }
+
+    main .box-visao-geral .flex-visao-geral #content-visao01{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+    main .box-visao-geral .flex-visao-geral #content-visao02{
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:600px){
+
+}
+
 
 /*@media (min-height: 600px) {
     
