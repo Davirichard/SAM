@@ -158,3 +158,12 @@ body {
     justify-content: flex-start;
     gap: 14px;
 }
+
+
+@media (min-height: 500px) {
+    
+    #sidebar {
+        min-height: 850px
+    }
+    
+}
