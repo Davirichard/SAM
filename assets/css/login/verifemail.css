@@ -10,7 +10,7 @@
 
 main{
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-color: #3E235C;
 }
 
@@ -180,7 +180,6 @@ main .container .flex-elements .right-verif form{
 
     main .container .flex-elements .left-img img {
         width: 400px;
-        
    }
 
     main .container .flex-elements .right-verif{

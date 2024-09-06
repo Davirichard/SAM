@@ -65,7 +65,6 @@ a {
 
 /*=============== HEADER ===============*/
 .header {
-  width: 100%;
   background-color:white;
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
   z-index: var(--z-fixed);
@@ -73,9 +72,9 @@ a {
 
 /*=============== NAV ===============*/
 
-#menu-mobile{
+/* #menu-mobile{
     display: none;
-}
+} */
 
 
 .nav {
