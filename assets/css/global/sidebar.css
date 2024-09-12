@@ -68,7 +68,7 @@ body {
 }
 
 .side-item.active {
-    background-color: #9361c9;
+    background-color: #6b3e9c;
 }
 
 .side-item:hover:not(.active),
