@@ -289,6 +289,8 @@ table td{
     border-top: 1px solid #dadada;
     background-color: #F9F9F9;
     padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .box-info-geral .flex-info{
@@ -298,13 +300,17 @@ table td{
 }
 
 .box-info-geral .flex-info span{
-    color: #666666;
+    color: #929292;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-left: 10px;
 }
 
 .box-info-geral .flex-info h5{
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: bold;
     text-transform: uppercase;
+    color: #313131;
 }
 
 .box-disciplina{
@@ -314,6 +320,7 @@ table td{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #929292;
 }
 
 .box-RM{
@@ -325,6 +332,7 @@ table td{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #929292;
 }
 
 @media screen and (min-width:1920px){
