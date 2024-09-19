@@ -76,9 +76,31 @@ main{
     margin-left: 82px;
 }
 
+
 main .container{
     max-width: 1440px;
     margin: 0 auto;
+}
+
+.box-title .flex-title{
+    display: flex;
+    align-items: center;
+}
+
+.flex-title h1{
+    font-size: 45px;
+    color: #3C2158;
+    margin-right: 10px;
+}
+
+.flex-title img{
+    width: 50px;
+}
+
+.box-title .line{
+    background-color: #D8D8D9;
+    width: 100%;
+    height: 2px;
 }
 
 form{
@@ -104,12 +126,13 @@ form label{
 .box-inputs .input{
     display: flex;
     flex-direction: column;
-    width: 49%;
+    width: 48%;
     margin-top: 20px; 
 }
 
 .box-inputs .input label{
     color: #28163a;
+    font-weight: bold;
 }
 
 .box-inputs .input-right{
@@ -143,6 +166,11 @@ form label{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0) inset;
     background-color: rgba(238, 238, 238, 0.84);
     outline: none;
+    color: #28163a;
+}
+
+.box-inputs .input textarea::placeholder{
+    color: #28163a;
 }
 
 .box-inputs .input select{
@@ -168,6 +196,7 @@ form label{
 
 .input-obser label{
     color: #28163a;
+    font-weight: bold;
 }
 
 .input-obser #observacoes{
@@ -180,15 +209,40 @@ form label{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0) inset;
     background-color: rgba(238, 238, 238, 0.84);
     border: none;
+    outline: none;
 }
 
-button{
-    margin: 0 auto;
+.input-obser #observacoes::placeholder{
+    color: #28163a;
+}
+
+.box-buttons{
     width: 100%;
+    height: auto;
     margin-top: 50px;
-    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+.box-buttons button{
+    width: 30%;
+    padding: 20px 40px;
+    margin: 0 20px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+.box-buttons .salvar{
+    background-color: #3C2158;
+    color: white;
+}
+
+.box-buttons .cancelar{
+    background-color: #5a3581c4;
+    color: white;
+}
 
 @media screen and (min-width:1920px){
     main .container{
@@ -232,13 +286,71 @@ header .box-search{
 }
 
 @media screen and (max-width:800px){
-    
-
+    .flex-title h1{
+        font-size: 30px;
+    }
 }
 
 
 @media screen and (max-width:660px){
-  
+
+}
+
+@media screen and (max-width:620px){
+    .flex-title{
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .flex-title .box-img{
+        background-color: #3c2158;
+        width: 80px; 
+        height:80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    @keyframes float{
+        0%,100%{
+            transform:translatey(0)
+        }
+        50%{
+            transform:translatey(-10px)
+        }
+    }
+    .flex-title .box-img img {
+         animation: float 2s ease-in-out infinite;
+    }
+
+    form{
+        padding: 50px 10px;
+    }
+
+    
+.box-inputs .input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px; 
+}
+
+.box-inputs .input-right{
+    margin-left: 0;
+}
+
+.box-buttons{
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+.box-buttons button{
+    width: 100%;
+    margin: 10px 0;
+}
 }
 
 @media screen and (max-width:600px){
@@ -260,5 +372,7 @@ header .box-search{
 
 
 @media screen and (max-width:400px){
-
+    .flex-title h1{
+        font-size: 25px;
+    }
 }
