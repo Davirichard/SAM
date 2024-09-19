@@ -200,39 +200,6 @@ main .container{
     color: white;
 }
 
-/* .tabela{
-    width:0;
-    margin-top: 40px;
-}
-
-.tabela table{
-    width: 100%;
-}
-
-table,tr,th,td{
-    text-align: center;
-    width: 200px ;
-    background-color: red;
-} */
-/* 
-.tabela table td{
-    width: 200px;
-    height: 200px;
-    background-color: purple;
-} */
-
-/* td .foto-docente{
-    background-image: url(../../img/home/coqui-chang-tnUp0OLSkDg-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 200px;
-}
-
-table td{
-    padding: 30px 0;
-    color: #282649;
-} */
 
 .table-flex-title{
     display: flex;
@@ -270,14 +237,12 @@ table td{
     display: flex;
     height: 200px;
     font-weight: bold;
-    background-color: red;
     margin-bottom:10px ;
 }
 
 .box-foto{
     width: 203px;
     height: auto;
-    background-color: pink;
 }
 
 .box-foto img{
@@ -385,6 +350,59 @@ header .box-search{
 
 }
 
+@media screen and (max-width:750px){
+
+    .tabela{
+        display: flex;
+        height: auto;
+        font-weight: bold;
+        margin-bottom:10px ;
+    }
+
+    .box-foto{
+        width: 150px;
+        height: auto;
+    }
+    
+    .box-foto img{
+        width: 100%;
+        height: 150px;
+        min-height:100px;
+    }
+
+    .box-info-geral{
+        width: 59%;
+        height: auto;
+        border-bottom:1px solid #dadada;
+        border-top: 1px solid #dadada;
+        background-color: #F9F9F9;
+        padding: 20px 10px;
+        overflow: hidden;
+    }
+
+    .box-info-geral .flex-info{
+        margin: 5px 0; 
+    }
+
+.box-info-geral .flex-info span{
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+.box-info-geral .flex-info h5{
+    font-size: 13px;
+}
+
+.box-disciplina{
+    font-size: 10px;
+}
+
+.box-RM{
+  font-size: 10px;
+}
+
+}
 
 @media screen and (max-width:660px){
   
