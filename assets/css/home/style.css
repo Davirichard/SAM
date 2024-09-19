@@ -122,6 +122,10 @@ main .container{
     margin-bottom: 30px;
 }
 
+#data-inicio{
+    color: white;
+}
+
 .box-visao h2{
     color: #3C2158;
     font-size: 30px;

@@ -239,37 +239,37 @@
                     <form action="#" method="POST">
                 
 
-                         <fieldset style="border: none; background-color: goldenrod;">
+                         <fieldset style="border: none;">
                             <div class="box-inputs">
 
                                 <div class="input">
                                     <label for="nome-curso">Nome do Curso:</label>
-                                    <input type="text" id="nome-curso" name="nome-curso" required>
+                                    <input type="text" id="nome-curso" name="nome-curso" placeholder="Digite o nome do curso" required>
                                 </div><!--input-->
 
                                 <div class="input input-right">
                                     <label for="codigo">Código:</label>
-                                    <input type="text" id="codigo" name="codigo" required>
+                                    <input type="text" id="codigo" name="codigo" placeholder="Digite o código do curso" required>
                                 </div><!--input-->
 
                                 <div class="input ">
                                     <label for="descricao">Descrição:</label>
-                                    <textarea id="descricao" name="descricao" rows="4" required></textarea>
+                                    <textarea id="descricao" name="descricao" rows="4"  placeholder="Descreva o curso" required></textarea>
                                 </div><!--input-->
 
                                 <div class="input input-right">
                                     <label for="departamento">Departamento:</label>
-                                    <input type="text" id="departamento" name="departamento" required>
+                                    <input type="text" id="departamento" name="departamento" placeholder="Digite o departamento" required>
                                 </div><!--input-->
 
                                 <div class="input">
                                     <label for="carga-horaria">Carga Horária (em horas):</label>
-                                    <input type="number" id="carga-horaria" name="carga-horaria" min="1" required>
+                                    <input type="number" id="carga-horaria" name="carga-horaria" placeholder="Ex: 40" min="1" required>
                                 </div><!--input-->
 
                                 <div class="input input-right">
                                     <label for="pre-requisitos">Pré-requisitos:</label>
-                                    <input type="text" id="pre-requisitos" name="pre-requisitos">
+                                    <input type="text" id="pre-requisitos" placeholder="Digite os pré-requisitos" name="pre-requisitos">
                                 </div><!--input-->
 
                                 <div class="input">
@@ -292,12 +292,12 @@
 
                                 <div class="input">
                                     <label for="periodo">Período/Semestre:</label>
-                                    <input type="text" id="periodo" name="periodo" required>
+                                    <input type="text" id="periodo" name="periodo" placeholder="Ex: 1º Semestre de 2024" required>
                                 </div><!--input-->
 
                                 <div class="input input-right">
                                     <label for="professor">Professor/Instrutor:</label>
-                                    <input type="text" id="professor" name="professor" required>
+                                    <input type="text" id="professor" placeholder="Digite o nome do professor" name="professor" required>
                                 </div><!--input-->
 
                                 <div class="input">
@@ -320,22 +320,22 @@
 
                                 <div class="input input-right">
                                     <label for="vagas">Vagas Disponíveis:</label>
-                                    <input type="number" id="vagas" name="vagas" min="1" required>
+                                    <input type="number" id="vagas" name="vagas" min="1" placeholder="Ex: 30" required>
                                 </div><!--input-->
 
                                 <div class="input">
                                     <label for="modalidade">Modalidade:</label>
-                                    <input type="text" id="modalidade" name="modalidade" required>
+                                    <input type="text" id="modalidade" name="modalidade" placeholder="Ex: EAD, Presencial" required>
                                 </div><!--input-->
 
                                 <div class="input input-right">
                                     <label for="material-recurso">Material e Recurso:</label>
-                                    <textarea id="material-recurso" name="material-recurso" rows="3"></textarea>
+                                    <textarea id="material-recurso" name="material-recurso" rows="3" placeholder="Liste os materiais e recursos necessários"></textarea>
                                 </div><!--input-->
 
-                                <div class="input">
+                                <div class="input-obser">
                                     <label for="observacoes">Observações:</label>
-                                    <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+                                    <textarea id="observacoes" name="observacoes" rows="3" placeholder="Ex: Este curso requer participação ativa em atividades práticas"></textarea>
                                 </div><!--input-->
 
                         </div><!--box-inputs-->

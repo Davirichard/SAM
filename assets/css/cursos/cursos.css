@@ -79,34 +79,115 @@ main{
 main .container{
     max-width: 1440px;
     margin: 0 auto;
-    background-color: blue;
-    padding: 0 10px;
+}
+
+form{
+    background-color: white;
+    margin: 50px 0;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+form label{
+    color: white;
 }
 
 .box-inputs{
-    background-color: red;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
+    align-items: center;
 }
 
 .box-inputs .input{
     display: flex;
     flex-direction: column;
-    width: 45%;
-    background-color: purple;
-    /* margin-top: 20px; */
+    width: 49%;
+    margin-top: 20px; 
+}
+
+.box-inputs .input label{
+    color: #28163a;
 }
 
 .box-inputs .input-right{
-    margin-right: 100px;
+    margin-left: 20px;
 }
 
 .box-inputs .input input{
     width: 100%;
+    padding: 10px 20px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0) inset;
+    background-color: rgba(238, 238, 238, 0.84);
+    color: #28163a;
+    outline: none;
 }
 
+.box-inputs .input input::placeholder{
+    color: #28163a;
+}
+
+.box-inputs .input textarea{
+    padding: 10px 20px;
+    /* height: 50px; */
+    resize: none;
+    border-radius: 10px;
+    border: none;
+    margin-top: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0) inset;
+    background-color: rgba(238, 238, 238, 0.84);
+    outline: none;
+}
+
+.box-inputs .input select{
+    padding: 10px 20px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 5px;
+    background-color: #28163a;
+    color: #28163a;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0) inset;
+    background-color: rgba(238, 238, 238, 0.84);
+    outline: none;
+}
+
+.input-obser{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    outline: none;
+}
+
+.input-obser label{
+    color: #28163a;
+}
+
+.input-obser #observacoes{
+    width: 100%;
+    resize: none;
+    padding: 10px 20px;
+    /* height: 50px; */
+    border-radius: 10px;
+    color: #28163a;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0) inset;
+    background-color: rgba(238, 238, 238, 0.84);
+    border: none;
+}
+
+button{
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px 0;
+}
 
 
 @media screen and (min-width:1920px){
