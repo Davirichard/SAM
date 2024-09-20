@@ -71,7 +71,7 @@ main{
     width: 100%; 
     height: auto; 
     background-color: #EBEBEB; 
-    padding: 50px 40px;
+    padding: 50px 20px;
     margin-top: 50px;
     margin-left: 82px;
 }
@@ -319,7 +319,7 @@ header .box-search{
             transform:translatey(0)
         }
         50%{
-            transform:translatey(-10px)
+            transform:translatey(-3px)
         }
     }
     .flex-title .box-img img {
