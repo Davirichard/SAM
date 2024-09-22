@@ -444,24 +444,13 @@ header .box-search{
 
 }
 
-@media screen and (max-width:660px){
-  
-}
-
-@media screen and (max-width:600px){
-    header{
-        justify-content: space-between;
-    }
+@media screen and (max-width:700px){
 
     .table-flex-title{
         display: none;
     }
 
-    /* .slide-flex-tabela{
-        display: flex;
-        justify-content: space-around;
-    } */
-
+    
     .filtro-tabela .tabela{
         display: none;
     }
@@ -511,6 +500,18 @@ header .box-search{
         min-height:200px;
         border-radius: 10px 10px 0 0;
     }
+}
+
+@media screen and (max-width:600px){
+    header{
+        justify-content: space-between;
+    }
+
+    /* .slide-flex-tabela{
+        display: flex;
+        justify-content: space-around;
+    } */
+
 
 }
 
