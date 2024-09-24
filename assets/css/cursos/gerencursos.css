@@ -113,12 +113,14 @@ main .container{
 
 .flex-gerenciamento-user{
     display: flex;
+    /* flex-wrap: wrap; */
     width: 100%;
     margin-top: 50px;
 }
 
 .box-user{
-    width: 33%;
+    width: 32%;
+    min-width: 200px;
     height: auto;
     border-radius: 20px;
     display: flex;
@@ -142,6 +144,11 @@ main .container{
     color: white;
     text-transform: uppercase;
     font-weight: bold;
+    transition: 0.2s;
+}
+
+.box-user a:hover{
+    background-color: #2b183f;
 }
 
 .box-user img{
@@ -198,19 +205,68 @@ header .box-search{
 }
 
 @media screen and (max-width:800px){
-    
+    .flex-title h1{
+        font-size: 30px;
+    }
 
 }
 
 
-@media screen and (max-width:660px){
-  
+@media screen and (max-width:700px){
+    .flex-gerenciamento-user{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .box-user{
+        width: 45%;
+        margin: 20px 10px;
+    }
+}
+
+@media screen and (max-width:620px){
+    .flex-title{
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .flex-title .box-img{
+        background-color: #3c2158b0;
+        width: 80px; 
+        height:80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    .box-img img{
+        width: 70px;
+    }
+
+    @keyframes float{
+        0%,100%{
+            transform:translatey(0)
+        }
+        50%{
+            transform:translatey(-3px)
+        }
+    }
+    .flex-title .box-img img {
+         animation: float 2s ease-in-out infinite;
+    }
+
+    form{
+        padding: 50px 10px;
+    }
+
 }
 
 @media screen and (max-width:600px){
-    header{
-        justify-content: space-between;
-    }
+
 
 }
 
@@ -225,6 +281,26 @@ header .box-search{
 }
 
 
-@media screen and (max-width:400px){
+@media screen and (max-width:480px){
+    
+    .box-user{
+        width: 100%;
+        margin: 20px 0;
+    }
 
+    .container p{
+        font-size: 13px;
+    }
+
+    .box-user img{
+        width: 80px;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width:400px){
+    .flex-title h1{
+        font-size: 25px;
+    }
 }
