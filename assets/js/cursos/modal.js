@@ -38,7 +38,7 @@ function deleteCourse(button) {
         setTimeout(() => {
             boxCurso.remove(); // Remove o elemento após a transição
             alert("Curso deletado com sucesso!"); // Mostra a mensagem
-        }, 500); // Espera 500 ms
+        }, 700); // Espera 500 ms
     } else {
         alert("Ação de deletar cancelada.");
     }
