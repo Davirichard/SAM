@@ -23,7 +23,23 @@ function editCourse() {
     // Aqui você pode adicionar a lógica para editar o curso
 }
 
-function deleteCourse() {
-    alert("Deletar curso");
-    // Aqui você pode adicionar a lógica para deletar o curso
+// function deleteCourse() {
+//     alert("Deletar curso");
+//     // Aqui você pode adicionar a lógica para deletar o curso
+// }
+
+function deleteCourse(button) {
+    const confirmDelete = confirm("Você tem certeza que deseja deletar este curso?");
+    if (confirmDelete) {
+        const boxCurso = button.closest('.box-curso');
+        boxCurso.style.transition = "opacity 0.5s"; // Adiciona uma transição
+        boxCurso.style.opacity = 0; // Esconde o elemento
+
+        setTimeout(() => {
+            boxCurso.remove(); // Remove o elemento após a transição
+            alert("Curso deletado com sucesso!"); // Mostra a mensagem
+        }, 500); // Espera 500 ms
+    } else {
+        alert("Ação de deletar cancelada.");
+    }
 }

@@ -194,6 +194,9 @@ main .container{
     cursor: pointer;
     color: #3C2158;
 }
+.modal-content{
+    padding: 10px;
+}
 
 .modal {
     position: absolute;
@@ -208,19 +211,17 @@ main .container{
     border-radius: 5px;
 }
 
-.modal-content {
-    padding: 10px;
-}
 
 .close {
     float: right;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    margin-top: 60px;
 }
 
 li {
@@ -231,6 +232,9 @@ ul li button {
     width: 100%;
     padding: 5px;
     cursor: pointer;
+    background-color: #3C2158;
+    color: white;
+    border: none;
 }
 
 
