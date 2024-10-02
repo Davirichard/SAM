@@ -124,27 +124,33 @@
                 <div class="line"></div>
             </div><!--box-title-->
            
-            <form action="#" method="POST">
+            <form action="editarcurso.html" method="get">
                 <!-- Primeiro grupo de inputs -->
                 <fieldset style="border: none;" class="step active">
+                    <legend>Informações Básicas</legend>
+                    
                     <div class="box-inputs">
                         <div class="input">
                             <label for="nome-curso">Nome do Curso:</label>
                             <input type="text" id="nome-curso" name="nome-curso" placeholder="Digite o nome do curso" required>
                         </div>
+                    
                         <div class="input input-right">
                             <label for="codigo">Código:</label>
                             <input type="text" id="codigo" name="codigo" placeholder="Digite o código do curso" required>
                         </div>
+                    
                         <div class="input">
-                            <label for="carga-horaria">Carga Horária (em horas):</label>
-                            <input type="number" id="carga-horaria" name="carga-horaria" placeholder="Ex: 40" min="1" required>
-                        </div>
-                        <div class="input input-right">
                             <label for="departamento">Departamento:</label>
                             <input type="text" id="departamento" name="departamento" placeholder="Digite o departamento" required>
                         </div>
-                    </div>
+                    
+                        <div class="input input-right">
+                            <label for="carga-horaria">Carga Horária (em horas):</label>
+                            <input type="number" id="carga-horaria" name="carga-horaria" placeholder="Ex: 40" min="1" required>
+                        </div>
+
+                    </div><!--box-inputs-->
                     <div class="box-buttons">
                         <button type="button" class="next">Próximo</button>
                     </div>
@@ -152,23 +158,68 @@
             
                 <!-- Segundo grupo de inputs -->
                 <fieldset style="border: none;" class="step">
+                    <legend>Detalhes do Curso</legend>
+                    
                     <div class="box-inputs">
                         <div class="input">
-                            <label for="responsavel">Responsável:</label>
-                            <input type="text" id="responsavel" name="responsavel" placeholder="Digite o nome do responsável" required>
+                            <label for="tipo-curso">Tipo de Curso:</label>
+                            <select id="tipo-curso" name="tipo-curso" required>
+                                <option value="presencial">Presencial</option>
+                                <option value="online">Online</option>
+                                <option value="semipresencial">Semipresencial</option>
+                            </select>
                         </div>
+                    
                         <div class="input input-right">
-                            <label for="data-inicio">Data de Início:</label>
-                            <input type="date" id="data-inicio" name="data-inicio" required>
+                            <label for="nivel-curso">Nível do Curso:</label>
+                            <select id="nivel-curso" name="nivel-curso" required>
+                                <option value="basico">Básico</option>
+                                <option value="intermediario">Intermediário</option>
+                                <option value="avancado">Avançado</option>
+                            </select>
                         </div>
+                    
                         <div class="input">
-                            <label for="data-fim">Data de Fim:</label>
-                            <input type="date" id="data-fim" name="data-fim" required>
+                            <label for="periodo">Período/Semestre:</label>
+                            <input type="text" id="periodo" name="periodo" placeholder="Ex: 1º Semestre de 2024" required>
                         </div>
+                    
                         <div class="input input-right">
-                            <label for="descricao">Descrição:</label>
-                            <textarea id="descricao" name="descricao" placeholder="Descreva o curso" required></textarea>
+                            <label for="professor">Professor/Instrutor:</label>
+                            <input type="text" id="professor" placeholder="Digite o nome do professor" name="professor" required>
                         </div>
+
+                    </div>
+                    <div class="box-buttons">
+                        <button type="button" class="prev">Voltar</button>
+                        <button type="button" class="next">Próximo</button>
+                    </div>
+                </fieldset>
+
+                <!-- Terceiro grupo de inputs -->
+                <fieldset style="border: none;" class="step">
+                    <legend>Descrição e Metodologia</legend>
+                    <div class="box-inputs">
+                        <div class="input">
+                            <label for="descricao">Descrição:</label>
+                            <textarea id="descricao" name="descricao" rows="4" placeholder="Descreva o curso" required></textarea>
+                        </div>
+                    
+                        <div class="input input-right">
+                            <label for="metodologia">Metodologia de Ensino:</label>
+                            <textarea id="metodologia" name="metodologia" rows="3" placeholder="Explique a metodologia do curso"></textarea>
+                        </div>
+                    
+                        <div class="input">
+                            <label for="objetivos-curso">Objetivos do Curso:</label>
+                            <textarea id="objetivos-curso" name="objetivos-curso" rows="3" placeholder="Descreva os objetivos do curso"></textarea>
+                        </div>
+                    
+                        <div class="input input-right">
+                            <label for="pre-requisitos">Pré-requisitos:</label>
+                            <input type="text" id="pre-requisitos" placeholder="Digite os pré-requisitos" name="pre-requisitos">
+                        </div>
+
                     </div>
                     <div class="box-buttons">
                         <button type="button" class="prev">Voltar</button>
@@ -176,34 +227,84 @@
                     </div>
                 </fieldset>
             
-                <!-- Terceiro grupo de inputs -->
+                <!-- Quarto grupo de inputs -->
                 <fieldset style="border: none;" class="step">
+                    <legend>Avaliação e Recursos</legend>
+                    
                     <div class="box-inputs">
                         <div class="input">
-                            <label for="publico-alvo">Público Alvo:</label>
-                            <input type="text" id="publico-alvo" name="publico-alvo" placeholder="Ex: Estudantes, Profissionais" required>
+                            <label for="criterios-avaliacao">Critérios de Avaliação:</label>
+                            <textarea id="criterios-avaliacao" name="criterios-avaliacao" rows="3" placeholder="Descreva os critérios de avaliação"></textarea>
                         </div>
+                    
                         <div class="input input-right">
+                            <label for="material-recurso">Material e Recurso:</label>
+                            <textarea id="material-recurso" name="material-recurso" rows="3" placeholder="Liste os materiais e recursos necessários"></textarea>
+                        </div>
+                    
+                        <div class="input">
                             <label for="modalidade">Modalidade:</label>
-                            <select id="modalidade" name="modalidade" required>
-                                <option value="online">Online</option>
-                                <option value="presencial">Presencial</option>
+                            <input type="text" id="modalidade" name="modalidade" placeholder="Ex: EAD, Presencial" required>
+                        </div>
+                    
+                        <div class="input input-right">
+                            <label for="vagas">Vagas Disponíveis:</label>
+                            <input type="number" id="vagas" name="vagas" min="1" placeholder="Ex: 30" required>
+                        </div>
+
+                    </div>
+                    <div class="box-buttons">
+                        <button type="button" class="prev">Voltar</button>
+                        <button type="button" class="next">Próximo</button>
+                    </div>
+                </fieldset>
+
+                <!-- Quinto grupo de inputs -->
+                <fieldset style="border: none;" class="step">
+                    <legend>Datas e Status</legend>
+                    
+                    <div class="box-inputs">
+                        <div class="input">
+                            <label for="data-inicio">Data de Início:</label>
+                            <input type="date" id="data-inicio" name="data-inicio" required>
+                        </div>
+                    
+                        <div class="input input-right">
+                            <label for="data-termino">Data de Término:</label>
+                            <input type="date" id="data-termino" name="data-termino" required>
+                        </div>
+                    
+                        <div class="input">
+                            <label for="status-curso">Status do Curso:</label>
+                            <select id="status-curso" name="status-curso" required>
+                                <option value="ativo">Ativo</option>
+                                <option value="inativo">Inativo</option>
                             </select>
                         </div>
-                        <div class="input">
-                            <label for="valor">Valor:</label>
-                            <input type="number" id="valor" name="valor" placeholder="Ex: 500" required>
-                        </div>
+                    
                         <div class="input input-right">
-                            <label for="inscricao">Data de Inscrição:</label>
-                            <input type="date" id="inscricao" name="inscricao" required>
+                            <label for="observacoes">Observações:</label>
+                            <textarea id="observacoes" name="observacoes" rows="3" placeholder="Ex: Este curso requer participação ativa em atividades práticas"></textarea>
                         </div>
                     </div>
+                    
                     <div class="box-buttons">
                         <button type="button" class="prev">Voltar</button>
                         <button type="submit" class="salvar">Salvar</button>
                     </div>
                 </fieldset>
+
+                <!-- Último passo com mensagem de sucesso -->
+                <fieldset style="border: none;" class="step">
+                    <legend>Sucesso</legend>
+                    <div class="box-inputs">
+                        <p>Curso cadastrado com sucesso!</p>
+                    </div>
+                    <div class="box-buttons">
+                        <button type="button" class="next" id="concluir">Concluir</button>
+                    </div>
+                </fieldset>
+
             </form>
             
         </div><!--container-->

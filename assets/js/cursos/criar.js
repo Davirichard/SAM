@@ -31,6 +31,11 @@ nextButtons.forEach(button => {
             currentStep++;
             showStep(currentStep);
         }
+
+        // Se chegar no último passo, exibe a mensagem de sucesso
+        if (currentStep === steps.length - 1) {
+            showSuccessMessage();
+        }
     });
 });
 
@@ -44,3 +49,21 @@ prevButtons.forEach(button => {
         }
     });
 });
+
+// Função para exibir a mensagem de sucesso e redirecionar
+function showSuccessMessage() {
+    // Exibe a mensagem de sucesso
+    const successStep = steps[steps.length - 1]; // Último step
+    successStep.querySelector('p').innerText = "Curso cadastrado com sucesso!";
+
+    // Evita que o formulário seja enviado
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();  // Previne o envio
+    });
+
+    // Redireciona após 3 segundos
+    setTimeout(() => {
+        window.location.href = "editarcurso.html"; // Substitua pelo caminho correto da sua página
+    }, 3000); // 3 segundos antes do redirecionamento
+}
