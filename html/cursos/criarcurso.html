@@ -17,228 +17,198 @@
     <title>Gerenciamento de Cursos</title>
 </head>
 <body>
-           <!--========== HEADER ==========-->
-           <header class="header">
-            <div class="header__container">
-                <img src="../../assets/img/persona/coqui-chang-COP.jpg" alt="" class="header__img">
-    
-                <a href="#" class="header__logo">SAM</a>
-    
-                <div class="header__search">
-                    <input type="search" placeholder="Search" class="header__input">
-                    <i class='bx bx-search header__icon'></i>
-                </div>
-    
-                <div class="header__toggle">
-                    <i class='bx bx-menu' id="header-toggle"></i>
-                </div>
-            </div>
-        </header>
-    
-                 <!--========== NAV ==========-->
-            <div class="nav" id="navbar">
-                <nav class="nav__container">
-                    <div>
-                        <a href="#" class="nav__link nav__logo">
-                            <i class='bx bxs-disc nav__icon' ></i>
-                            <span class="nav__logo-name">SAM</span>
-                        </a>
-        
-                        <div class="nav__list">
-                            <div class="nav__items">
-                                <h3 class="nav__subtitle">Home</h3>
-        
-                                <a href="../../html/home/home.html" class="nav__link">
-                                    <i class='bx bx-home nav__icon' ></i>
-                                    <span class="nav__name">Home</span>
-                                </a>
-                                
-                                <a href="../usuarios/gerenuser.html" class="nav__link">
-                                    <i class='bx bx-user nav__icon' ></i>
-                                    <span class="nav__name">Gerenciar Usuários</span>
-                                </a>
+ <!--========== HEADER ==========-->
+ <header class="header">
+    <div class="header__container">
+        <img src="../../assets/img/persona/coqui-chang-COP.jpg" alt="" class="header__img">
 
-                                <div class="nav__dropdown">
-                                    <a href="#" class="nav__link active">
-                                        <i class='bx bx-edit-alt nav__icon'></i>
-                                        <span class="nav__name">Gerenciar Cursos</span>
-                                        <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
-                                    </a>
-    
-                                    <div class="nav__dropdown-collapse">
-                                        <div class="nav__dropdown-content">
-                                            <a href="index.html" class="nav__dropdown-item">Home</a>
-                                            <a href="editarcurso.html" class="nav__dropdown-item">Editar Curso</a>
-                                        </div>
-                                    </div>
+        <a href="#" class="header__logo">SAM</a>
+
+        <div class="header__search">
+            <input type="search" placeholder="Search" class="header__input">
+            <i class='bx bx-search header__icon'></i>
+        </div>
+
+        <div class="header__toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+        </div>
+    </div>
+</header>
+
+         <!--========== NAV ==========-->
+    <div class="nav" id="navbar">
+        <nav class="nav__container">
+            <div>
+                <a href="#" class="nav__link nav__logo">
+                    <i class='bx bxs-disc nav__icon' ></i>
+                    <span class="nav__logo-name">SAM</span>
+                </a>
+
+                <div class="nav__list">
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Home</h3>
+
+                        <a href="../../html/home/home.html" class="nav__link">
+                            <i class='bx bx-home nav__icon' ></i>
+                            <span class="nav__name">Home</span>
+                        </a>
+                        
+                        <a href="../usuarios/gerenuser.html" class="nav__link">
+                            <i class='bx bx-user nav__icon' ></i>
+                            <span class="nav__name">Gerenciar Usuários</span>
+                        </a>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link active">
+                                <i class='bx bx-edit-alt nav__icon'></i>
+                                <span class="nav__name">Gerenciar Cursos</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="index.html" class="nav__dropdown-item">Home</a>
+                                    <a href="editarcurso.html" class="nav__dropdown-item">Editar Curso</a>
                                 </div>
-                            </div>
-        
-                            <div class="nav__items">
-                                <h3 class="nav__subtitle">Menu</h3>
-        
-                                <div class="nav__dropdown">
-                                    <a href="#" class="nav__link">
-                                        <i class='bx bx-bell nav__icon' ></i>
-                                        <span class="nav__name">Notifications</span>
-                                        <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
-                                    </a>
-    
-                                    <div class="nav__dropdown-collapse">
-                                        <div class="nav__dropdown-content">
-                                            <a href="#" class="nav__dropdown-item">Blocked</a>
-                                            <a href="#" class="nav__dropdown-item">Silenced</a>
-                                            <a href="#" class="nav__dropdown-item">Publish</a>
-                                            <a href="#" class="nav__dropdown-item">Program</a>
-                                        </div>
-                                    </div>
-    
-                                </div>
-    
-                                <a href="#" class="nav__link">
-                                    <i class='bx bx-compass nav__icon' ></i>
-                                    <span class="nav__name">Explore</span>
-                                </a>
-                                <a href="#" class="nav__link">
-                                    <i class='bx bx-bookmark nav__icon' ></i>
-                                    <span class="nav__name">Saved</span>
-                                </a>
                             </div>
                         </div>
                     </div>
-    
-                    <a href="#" class="nav__link nav__logout">
-                        <i class='bx bx-log-out nav__icon' ></i>
-                        <span class="nav__name">Log Out</span>
-                    </a>
-                </nav>
-            </div>
-    
-        <main>
-            <div class="container">
-                <div class="box-title">
-                    <div class="flex-title">
-                        <h1>Criar Curso</h1>
-                        <div class="box-img"><img src="../../assets/img/cursos/cusos.svg" alt="" srcset=""></div>
+
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Menu</h3>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-bell nav__icon' ></i>
+                                <span class="nav__name">Notifications</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="#" class="nav__dropdown-item">Blocked</a>
+                                    <a href="#" class="nav__dropdown-item">Silenced</a>
+                                    <a href="#" class="nav__dropdown-item">Publish</a>
+                                    <a href="#" class="nav__dropdown-item">Program</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-compass nav__icon' ></i>
+                            <span class="nav__name">Explore</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-bookmark nav__icon' ></i>
+                            <span class="nav__name">Saved</span>
+                        </a>
                     </div>
-                    <div class="line"></div>
-                </div><!--box-title-->
-                    <form action="#" method="POST">
-                
+                </div>
+            </div>
 
-                         <fieldset style="border: none;">
-                            <div class="box-inputs">
-
-                                <div class="input">
-                                    <label for="nome-curso">Nome do Curso:</label>
-                                    <input type="text" id="nome-curso" name="nome-curso" placeholder="Digite o nome do curso" required>
-                                </div><!--input-->
-
-                                <div class="input input-right">
-                                    <label for="codigo">Código:</label>
-                                    <input type="text" id="codigo" name="codigo" placeholder="Digite o código do curso" required>
-                                </div><!--input-->
-
-                                <div class="input ">
-                                    <label for="descricao">Descrição:</label>
-                                    <textarea id="descricao" name="descricao" rows="4"  placeholder="Descreva o curso" required></textarea>
-                                </div><!--input-->
-
-                                <div class="input input-right">
-                                    <label for="departamento">Departamento:</label>
-                                    <input type="text" id="departamento" name="departamento" placeholder="Digite o departamento" required>
-                                </div><!--input-->
-
-                                <div class="input">
-                                    <label for="carga-horaria">Carga Horária (em horas):</label>
-                                    <input type="number" id="carga-horaria" name="carga-horaria" placeholder="Ex: 40" min="1" required>
-                                </div><!--input-->
-
-                                <div class="input input-right">
-                                    <label for="pre-requisitos">Pré-requisitos:</label>
-                                    <input type="text" id="pre-requisitos" placeholder="Digite os pré-requisitos" name="pre-requisitos">
-                                </div><!--input-->
-
-                                <div class="input">
-                                    <label for="tipo-curso">Tipo de Curso:</label>
-                                    <select id="tipo-curso" name="tipo-curso" required>
-                                        <option value="presencial">Presencial</option>
-                                        <option value="online">Online</option>
-                                        <option value="semipresencial">Semipresencial</option>
-                                    </select>
-                                </div><!--input-->
-
-                                <div class="input input-right">
-                                    <label for="nivel-curso">Nível do Curso:</label>
-                                    <select id="nivel-curso" name="nivel-curso" required>
-                                        <option value="basico">Básico</option>
-                                        <option value="intermediario">Intermediário</option>
-                                        <option value="avancado">Avançado</option>
-                                    </select>
-                                </div><!--input-->
-
-                                <div class="input">
-                                    <label for="periodo">Período/Semestre:</label>
-                                    <input type="text" id="periodo" name="periodo" placeholder="Ex: 1º Semestre de 2024" required>
-                                </div><!--input-->
-
-                                <div class="input input-right">
-                                    <label for="professor">Professor/Instrutor:</label>
-                                    <input type="text" id="professor" placeholder="Digite o nome do professor" name="professor" required>
-                                </div><!--input-->
-
-                                <div class="input">
-                                    <label for="status-curso">Status do Curso:</label>
-                                    <select id="status-curso" name="status-curso" required>
-                                        <option value="ativo">Ativo</option>
-                                        <option value="inativo">Inativo</option>
-                                    </select>
-                                </div><!--input-->
-
-                                <div class="input input-right">
-                                    <label for="data-inicio">Data de Início:</label>
-                                    <input type="date" id="data-inicio" name="data-inicio" required>
-                                </div><!--input-->
-
-                                <div class="input">
-                                    <label for="data-termino">Data de Término:</label>
-                                    <input type="date" id="data-termino" name="data-termino" required>
-                                </div><!--input-->
-
-                                <div class="input input-right">
-                                    <label for="vagas">Vagas Disponíveis:</label>
-                                    <input type="number" id="vagas" name="vagas" min="1" placeholder="Ex: 30" required>
-                                </div><!--input-->
-
-                                <div class="input">
-                                    <label for="modalidade">Modalidade:</label>
-                                    <input type="text" id="modalidade" name="modalidade" placeholder="Ex: EAD, Presencial" required>
-                                </div><!--input-->
-
-                                <div class="input input-right">
-                                    <label for="material-recurso">Material e Recurso:</label>
-                                    <textarea id="material-recurso" name="material-recurso" rows="3" placeholder="Liste os materiais e recursos necessários"></textarea>
-                                </div><!--input-->
-
-                                <div class="input-obser">
-                                    <label for="observacoes">Observações:</label>
-                                    <textarea id="observacoes" name="observacoes" rows="3" placeholder="Ex: Este curso requer participação ativa em atividades práticas"></textarea>
-                                </div><!--input-->
-
-                        </div><!--box-inputs-->
-                        <div class="box-buttons">
-                            <button type="submit" class="salvar">Salvar alterações</button>
-                            <button type="submit" class="cancelar" onclick="window.location.href='index.html'">Cancelar</button>
-                        </div><!--box-buttons-->
-                        </fieldset> 
-                    </form>
-            </div><!--container-->
-        </main>
+            <a href="#" class="nav__link nav__logout">
+                <i class='bx bx-log-out nav__icon' ></i>
+                <span class="nav__name">Log Out</span>
+            </a>
+        </nav>
     </div>
 
-    <!-- <script src="../../assets/js/sidebar/sidebar.js"></script>
-    <script src="../../assets/js/home/bottomnav.js"></script>
-    <script src="../../assets/js/home/menumobile.js"></script> -->
+    <main>
+        <div class="container">
+            <div class="box-title">
+                <div class="flex-title">
+                    <h1>Criar Curso</h1>
+                    <div class="box-img"><img src="../../assets/img/cursos/cusos.svg" alt="" srcset=""></div>
+                </div>
+                <div class="line"></div>
+            </div><!--box-title-->
+           
+            <form action="#" method="POST">
+                <!-- Primeiro grupo de inputs -->
+                <fieldset style="border: none;" class="step active">
+                    <div class="box-inputs">
+                        <div class="input">
+                            <label for="nome-curso">Nome do Curso:</label>
+                            <input type="text" id="nome-curso" name="nome-curso" placeholder="Digite o nome do curso" required>
+                        </div>
+                        <div class="input input-right">
+                            <label for="codigo">Código:</label>
+                            <input type="text" id="codigo" name="codigo" placeholder="Digite o código do curso" required>
+                        </div>
+                        <div class="input">
+                            <label for="carga-horaria">Carga Horária (em horas):</label>
+                            <input type="number" id="carga-horaria" name="carga-horaria" placeholder="Ex: 40" min="1" required>
+                        </div>
+                        <div class="input input-right">
+                            <label for="departamento">Departamento:</label>
+                            <input type="text" id="departamento" name="departamento" placeholder="Digite o departamento" required>
+                        </div>
+                    </div>
+                    <div class="box-buttons">
+                        <button type="button" class="next">Próximo</button>
+                    </div>
+                </fieldset>
+            
+                <!-- Segundo grupo de inputs -->
+                <fieldset style="border: none;" class="step">
+                    <div class="box-inputs">
+                        <div class="input">
+                            <label for="responsavel">Responsável:</label>
+                            <input type="text" id="responsavel" name="responsavel" placeholder="Digite o nome do responsável" required>
+                        </div>
+                        <div class="input input-right">
+                            <label for="data-inicio">Data de Início:</label>
+                            <input type="date" id="data-inicio" name="data-inicio" required>
+                        </div>
+                        <div class="input">
+                            <label for="data-fim">Data de Fim:</label>
+                            <input type="date" id="data-fim" name="data-fim" required>
+                        </div>
+                        <div class="input input-right">
+                            <label for="descricao">Descrição:</label>
+                            <textarea id="descricao" name="descricao" placeholder="Descreva o curso" required></textarea>
+                        </div>
+                    </div>
+                    <div class="box-buttons">
+                        <button type="button" class="prev">Voltar</button>
+                        <button type="button" class="next">Próximo</button>
+                    </div>
+                </fieldset>
+            
+                <!-- Terceiro grupo de inputs -->
+                <fieldset style="border: none;" class="step">
+                    <div class="box-inputs">
+                        <div class="input">
+                            <label for="publico-alvo">Público Alvo:</label>
+                            <input type="text" id="publico-alvo" name="publico-alvo" placeholder="Ex: Estudantes, Profissionais" required>
+                        </div>
+                        <div class="input input-right">
+                            <label for="modalidade">Modalidade:</label>
+                            <select id="modalidade" name="modalidade" required>
+                                <option value="online">Online</option>
+                                <option value="presencial">Presencial</option>
+                            </select>
+                        </div>
+                        <div class="input">
+                            <label for="valor">Valor:</label>
+                            <input type="number" id="valor" name="valor" placeholder="Ex: 500" required>
+                        </div>
+                        <div class="input input-right">
+                            <label for="inscricao">Data de Inscrição:</label>
+                            <input type="date" id="inscricao" name="inscricao" required>
+                        </div>
+                    </div>
+                    <div class="box-buttons">
+                        <button type="button" class="prev">Voltar</button>
+                        <button type="submit" class="salvar">Salvar</button>
+                    </div>
+                </fieldset>
+            </form>
+            
+        </div><!--container-->
+
+    <script src="../../assets/js/cursos/criar.js"></script>
     <script src="../../assets/js/global/navgation.js"></script>
 </body>
 </html>

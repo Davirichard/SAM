@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/global/navgation.css">
+    <link rel="stylesheet" href="../../assets/css/cursos/cursos.css">
+
+    <link rel="icon" href="../../assets/img/icone_logo 1.png" type="image/png"> <!-- Ícone da aba do navegador -->
+
+    <!--==== Box-icons ====-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Document</title>
+</head>
+<body>
+              <!--========== HEADER ==========-->
+              <header class="header">
+                <div class="header__container">
+                    <img src="../../assets/img/persona/coqui-chang-COP.jpg" alt="" class="header__img">
+        
+                    <a href="#" class="header__logo">SAM</a>
+        
+                    <div class="header__search">
+                        <input type="search" placeholder="Search" class="header__input">
+                        <i class='bx bx-search header__icon'></i>
+                    </div>
+        
+                    <div class="header__toggle">
+                        <i class='bx bx-menu' id="header-toggle"></i>
+                    </div>
+                </div>
+            </header>
+        
+                     <!--========== NAV ==========-->
+                <div class="nav" id="navbar">
+                    <nav class="nav__container">
+                        <div>
+                            <a href="#" class="nav__link nav__logo">
+                                <i class='bx bxs-disc nav__icon' ></i>
+                                <span class="nav__logo-name">SAM</span>
+                            </a>
+            
+                            <div class="nav__list">
+                                <div class="nav__items">
+                                    <h3 class="nav__subtitle">Home</h3>
+            
+                                    <a href="../../html/home/home.html" class="nav__link">
+                                        <i class='bx bx-home nav__icon' ></i>
+                                        <span class="nav__name">Home</span>
+                                    </a>
+                                    
+                                    <a href="../usuarios/gerenuser.html" class="nav__link">
+                                        <i class='bx bx-user nav__icon' ></i>
+                                        <span class="nav__name">Gerenciar Usuários</span>
+                                    </a>
+    
+                                    <div class="nav__dropdown">
+                                        <a href="#" class="nav__link active">
+                                            <i class='bx bx-edit-alt nav__icon'></i>
+                                            <span class="nav__name">Gerenciar Cursos</span>
+                                            <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                        </a>
+        
+                                        <div class="nav__dropdown-collapse">
+                                            <div class="nav__dropdown-content">
+                                                <a href="index.html" class="nav__dropdown-item">Home</a>
+                                                <a href="editarcurso.html" class="nav__dropdown-item">Editar Curso</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="nav__items">
+                                    <h3 class="nav__subtitle">Menu</h3>
+            
+                                    <div class="nav__dropdown">
+                                        <a href="#" class="nav__link">
+                                            <i class='bx bx-bell nav__icon' ></i>
+                                            <span class="nav__name">Notifications</span>
+                                            <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                        </a>
+        
+                                        <div class="nav__dropdown-collapse">
+                                            <div class="nav__dropdown-content">
+                                                <a href="#" class="nav__dropdown-item">Blocked</a>
+                                                <a href="#" class="nav__dropdown-item">Silenced</a>
+                                                <a href="#" class="nav__dropdown-item">Publish</a>
+                                                <a href="#" class="nav__dropdown-item">Program</a>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+        
+                                    <a href="#" class="nav__link">
+                                        <i class='bx bx-compass nav__icon' ></i>
+                                        <span class="nav__name">Explore</span>
+                                    </a>
+                                    <a href="#" class="nav__link">
+                                        <i class='bx bx-bookmark nav__icon' ></i>
+                                        <span class="nav__name">Saved</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <a href="#" class="nav__link nav__logout">
+                            <i class='bx bx-log-out nav__icon' ></i>
+                            <span class="nav__name">Log Out</span>
+                        </a>
+                    </nav>
+                </div>
+
+                <main>
+                    <div class="container">
+                        <div class="box-title">
+                            <div class="flex-title">
+                                <h1>Criar Curso</h1>
+                                <div class="box-img"><img src="../../assets/img/cursos/cusos.svg" alt="" srcset=""></div>
+                            </div>
+                            <div class="line"></div>
+                        </div><!--box-title-->
+                       
+                        <form action="#" method="POST">
+                            <!-- Primeiro grupo de inputs -->
+                            <fieldset style="border: none;" class="step active">
+                                <div class="box-inputs">
+                                    <div class="input">
+                                        <label for="nome-curso">Nome do Curso:</label>
+                                        <input type="text" id="nome-curso" name="nome-curso" placeholder="Digite o nome do curso" required>
+                                    </div>
+                                    <div class="input input-right">
+                                        <label for="codigo">Código:</label>
+                                        <input type="text" id="codigo" name="codigo" placeholder="Digite o código do curso" required>
+                                    </div>
+                                    <div class="input">
+                                        <label for="carga-horaria">Carga Horária (em horas):</label>
+                                        <input type="number" id="carga-horaria" name="carga-horaria" placeholder="Ex: 40" min="1" required>
+                                    </div>
+                                    <div class="input input-right">
+                                        <label for="departamento">Departamento:</label>
+                                        <input type="text" id="departamento" name="departamento" placeholder="Digite o departamento" required>
+                                    </div>
+                                </div>
+                                <div class="box-buttons">
+                                    <button type="button" class="next">Próximo</button>
+                                </div>
+                            </fieldset>
+                        
+                            <!-- Segundo grupo de inputs -->
+                            <fieldset style="border: none;" class="step">
+                                <div class="box-inputs">
+                                    <div class="input">
+                                        <label for="responsavel">Responsável:</label>
+                                        <input type="text" id="responsavel" name="responsavel" placeholder="Digite o nome do responsável" required>
+                                    </div>
+                                    <div class="input input-right">
+                                        <label for="data-inicio">Data de Início:</label>
+                                        <input type="date" id="data-inicio" name="data-inicio" required>
+                                    </div>
+                                    <div class="input">
+                                        <label for="data-fim">Data de Fim:</label>
+                                        <input type="date" id="data-fim" name="data-fim" required>
+                                    </div>
+                                    <div class="input input-right">
+                                        <label for="descricao">Descrição:</label>
+                                        <textarea id="descricao" name="descricao" placeholder="Descreva o curso" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="box-buttons">
+                                    <button type="button" class="prev">Voltar</button>
+                                    <button type="button" class="next">Próximo</button>
+                                </div>
+                            </fieldset>
+                        
+                            <!-- Terceiro grupo de inputs -->
+                            <fieldset style="border: none;" class="step">
+                                <div class="box-inputs">
+                                    <div class="input">
+                                        <label for="publico-alvo">Público Alvo:</label>
+                                        <input type="text" id="publico-alvo" name="publico-alvo" placeholder="Ex: Estudantes, Profissionais" required>
+                                    </div>
+                                    <div class="input input-right">
+                                        <label for="modalidade">Modalidade:</label>
+                                        <select id="modalidade" name="modalidade" required>
+                                            <option value="online">Online</option>
+                                            <option value="presencial">Presencial</option>
+                                        </select>
+                                    </div>
+                                    <div class="input">
+                                        <label for="valor">Valor:</label>
+                                        <input type="number" id="valor" name="valor" placeholder="Ex: 500" required>
+                                    </div>
+                                    <div class="input input-right">
+                                        <label for="inscricao">Data de Inscrição:</label>
+                                        <input type="date" id="inscricao" name="inscricao" required>
+                                    </div>
+                                </div>
+                                <div class="box-buttons">
+                                    <button type="button" class="prev">Voltar</button>
+                                    <button type="submit" class="salvar">Salvar</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                        
+                    </div><!--container-->
+
+                <script src="assets/js/cursos/criar.js"></script>
+</body>
+</html>
