@@ -18,10 +18,11 @@ main{
     background-color: #fafafa; 
     padding: 30px 20px;
 }
-
+/* 
 body{
-    background-color: #fafafa;
-}
+    background-color: #fafafa; 
+    height: 100vh;
+} */
 
 main .container{
     max-width: 1440px;
