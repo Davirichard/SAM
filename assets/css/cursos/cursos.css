@@ -12,11 +12,14 @@ a{
     text-decoration: none;
 }
 
+body{
+    background-color: #fafafa;
+}
 
 main{
     width: 100%; 
     height: auto; 
-    background-color: #EBEBEB; 
+    background-color: #fafafa; 
     padding: 30px 20px;
 }
 
