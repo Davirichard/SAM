@@ -62,6 +62,7 @@ main{
 
 .flex-box-dashboard .box-dashboard{
     width: 30%;
+    /* min-width: 200px; */
     height: auto;
     background-color: white;
     border-radius: 10px;
@@ -110,15 +111,96 @@ main{
 aside{
     width: 30%;
     height: auto;
-    background-color: purple;
+    background-color: #f6f9f8;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .section-grafico{
     width: 100%;
     height: auto;
+    padding: 0 40px 50px 40px;
 }
+
+/* .box-grifico{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+} */
 
 .section-grafico canvas{
     width: 100%;
-    height: 235px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width:1060px){
+    main{
+        width: 60%;
+        height: auto;
+    }
+
+    .flex-box-dashboard{
+        flex-wrap: wrap;
+    }
+
+    .flex-box-dashboard .box-dashboard{
+        width: 100%;
+    }
+
+    aside{
+        width: 40%;
+        height: auto;
+    }
+    
+}
+
+@media screen and (max-width:768px){
+    .dashboard{
+        padding:50px 20px;
+    }
+
+    .flex-box-dashboard .box-dashboard{
+        margin: 10px 10px 10px 10px;
+    }
+
+    .section-grafico{
+        width: 100%;
+        height: auto;
+        padding: 0 20px 50px 20px;
+    }
+}
+
+@media screen and (max-width:750px){
+    .global-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main{
+        width: 100%;
+        height: auto;
+    }
+
+    .dashboard{
+        padding:50px 0;
+    }
+
+    .section-grafico{
+        width: 100%;
+        height: auto;
+        padding: 0 10px 50px 10px;
+    }
+
+    aside{
+        width: 100%;
+        height: 250px;
+    }
+
+    .section-grafico canvas{
+        width: 100%;
+        height: 235px;
+    }
+}
+
+@media screen and (max-width:450px){
 }
