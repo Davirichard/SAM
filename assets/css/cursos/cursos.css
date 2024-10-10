@@ -30,7 +30,7 @@ main{
 }
 
 main .formulario-flex{
-    width: 100%;
+    max-width: 1440px;
     height: auto;
     display: flex;
     padding: 0 40px;
@@ -237,6 +237,15 @@ button:hover {
 
 .salvar:hover{
     background-color: #68812d;
+}
+
+@media screen and (min-width:1400px){
+    main .formulario-flex{
+        max-width: 2000px;
+        height: auto;
+        display: flex;
+        padding: 0 40px;
+    }
 }
 
 
