@@ -43,6 +43,7 @@ main{
 .container .box-title h1{
   color: #3C2158;
   font-size: 41px;
+
 }
 
 .box-title .filtro{
@@ -61,10 +62,12 @@ main{
   border-radius: 25px;
 }
 
-.card {
+/* .card {
   border-radius: 25px;
   background-color: #fff;
-}
+  width: 30%;
+  margin: 0 10px;
+} */
 
 .image-content,
 .card-content {
@@ -166,6 +169,7 @@ main{
 .swiper-pagination-bullet-active {
   background-color: #ebae3e;
 }
+
 
 @media screen and (max-width:800px){
    .box-title h1{
