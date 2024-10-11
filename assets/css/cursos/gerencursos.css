@@ -112,7 +112,7 @@ main .container{
 
 .box-user .img-criar{
     width: 100%;
-    height: 300px;
+    height: 250px;
     margin-top: 20px;
     margin-bottom: 20px;
     background-image: url(../../img/cursos/criarcurso.webp);
@@ -122,7 +122,7 @@ main .container{
 
 .box-user .img-editar{
     width: 100%;
-    height: 300px;
+    height: 250px;
     margin-top: 20px;
     margin-bottom: 20px;
     background-image: url(../../img/cursos/editar.png);
@@ -133,7 +133,7 @@ main .container{
 
 .box-user .img-deletar{
     width: 100%;
-    height: 300px;
+    height: 250px;
     margin-top: 20px;
     margin-bottom: 20px;
     background-image: url(../../img/cursos/deletacurso.webp);
