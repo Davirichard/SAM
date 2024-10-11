@@ -35,15 +35,16 @@ main{
   text-align: center;
 }
 
+.box-title h1{
+  color: #8aab3d;
+  font-size: 41px;
+}
+
 .box-title .flex-title img{
   width: 50px;
   margin-left: 10px;
 }
 
-.container .box-title h1{
-  color: #3C2158;
-  font-size: 41px;
-}
 
 .box-title .filtro{
   width: 40px;

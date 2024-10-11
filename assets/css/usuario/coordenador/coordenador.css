@@ -35,6 +35,12 @@ main{
   text-align: center;
 }
 
+.flex-title h1{
+  font-size: 45px;
+  color: #5e6fce;
+  margin-right: 10px;
+}
+
 .box-title .flex-title img{
   width: 50px;
   margin-left: 10px;
