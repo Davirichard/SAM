@@ -16,19 +16,19 @@ body{
 }
 
 .box-icon{
-    background-color:#ff7f50;
-    width: 50px;
-    height: 50px;
+    background-color:#a165b9;
+    width: 80px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 100%;
+    margin-bottom: 10px;
 }
 
-svg{
-    fill: white;
-    width: 30px;
-    height: 30px;
+.box-icon img{
+    width: 50px;
+    height: 50px;
 }
 
 .global-container{
@@ -53,6 +53,7 @@ main{
 
 .dashboard .box-title-dashboard h1{
     margin-bottom: 5px;
+    color: #b82eee;
 }
 
 .flex-box-dashboard{
@@ -64,49 +65,90 @@ main{
     width: 30%;
     /* min-width: 200px; */
     height: auto;
-    background-color: white;
+    background-color: #8b01bf;
+    color: white;
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.box-dashboard i{
-    font-size: 30px;
+/* .box-dashboard i{
     padding: 10px;
     background-color:#ff7f50;
     color: white;
     border-radius: 100%;
-}
+} */
 
 .box-flex-dados{  
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
+    justify-content: center;
+}
+
+.dados{
+    text-align: center;
 }
 
 .dados span{
     margin-bottom: 10px;
     font-weight: bold;
-    color: #33463f;
+    color: white;
+    font-size:15px;
 }
 
 .dados h3{
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 800;
-    color: #33463f;
+    color: white;
 }
 
-.box-flex-dados .grafico{
-    width: 50px;
-    height: 50px;
-    background-color: #ff7f50a6;
+
+.section-registro{
+    width: 100%;
+    height: auto;
+    padding: 0 40px 50px 40px;
 }
 
-.box-dashboard span{
-    font-size: 12px;
+.section-registro h2{
+    margin-bottom: 20px;
+    color: #8b01bf;
 }
+
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Rolagem horizontal em telas menores */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 400px; /* Para evitar tabelas muito comprimidas */
+  }
+  
+  thead {
+    background-color: #8b01bf;
+    color: #fff;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+
 
 aside{
     width: 30%;
@@ -132,6 +174,7 @@ aside{
     width: 100%;
     margin-top: 20px;
 }
+
 
 @media screen and (max-width:1060px){
     main{
@@ -170,7 +213,7 @@ aside{
     }
 }
 
-@media screen and (max-width:750px){
+@media screen and (max-width:940px){
     .global-container{
         display: flex;
         flex-direction: column;
@@ -191,9 +234,15 @@ aside{
         padding: 0 10px 50px 10px;
     }
 
+    .section-registro{
+        width: 100%;
+        height: auto;
+        padding: 0 10px 50px 10px;
+    }
+
     aside{
         width: 100%;
-        height: 250px;
+        height: auto;
     }
 
     .section-grafico canvas{
@@ -201,6 +250,38 @@ aside{
         height: 235px;
     }
 }
+
+/* Responsividade para telas menores */
+@media (max-width: 500px) {
+    table {
+      min-width: unset; /* Permitir que a largura da tabela se ajuste */
+    }
+  
+    thead {
+      display: none; /* Oculta o cabeçalho da tabela */
+    }
+  
+    tbody td {
+      display: block;
+      width: 100%;
+      text-align: right;
+      padding: 8px;
+      position: relative;
+      border-bottom: 1px solid #eee;
+    }
+  
+    tbody td::before {
+      content: attr(data-label); /* Cria rótulos para os dados */
+      position: absolute;
+      left: 0;
+      width: 50%;
+      font-weight: bold;
+      text-align: left;
+      color: #333;
+    }
+  }
+
+
 
 @media screen and (max-width:450px){
 }

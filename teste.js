@@ -1,30 +1,15 @@
-const slides = document.querySelectorAll('.slide');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-let currentIndex = 0;
+const headerImg = document.getElementById('header-img');
+const modal = document.getElementById('modal');
+const closeBtn = document.getElementById('close-btn');
 
-function showSlide(index) {
-    const totalSlides = slides.length;
-    currentIndex = (index + totalSlides) % totalSlides; // Looping
-    const offset = -currentIndex * 100;
-    document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
-}
-
-prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
-nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
-
-// To enable touch swiping on mobile
-let startX, endX;
-
-document.querySelector('.slider').addEventListener('touchstart', (event) => {
-    startX = event.touches[0].clientX;
+// Função para abrir o modal
+headerImg.addEventListener('click', () => {
+  modal.style.display = 'flex';
+  modal.style.top = `${headerImg.offsetHeight}px`; // Ajusta a posição
 });
 
-document.querySelector('.slider').addEventListener('touchend', (event) => {
-    endX = event.changedTouches[0].clientX;
-    if (startX > endX + 50) {
-        showSlide(currentIndex + 1); // Swipe left
-    } else if (startX < endX - 50) {
-        showSlide(currentIndex - 1); // Swipe right
-    }
+// Função para fechar o modal
+closeBtn.addEventListener('click', () => {
+  modal.style.top = '100%'; // Volta para fora da tela
+  setTimeout(() => (modal.style.display = 'none'), 500); // Esconde após animação
 });
