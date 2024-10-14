@@ -1,40 +1,197 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="teste.css">
-    <title>Slider Responsivo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard SAM</title>
+  <style>
+    /* Estilo básico simplificado */
+    body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f4f4; }
+    header { background-color: #4CAF50; color: white; padding: 15px; text-align: center; }
+    nav a { margin: 0 10px; text-decoration: none; color: white; font-weight: bold; }
+    main, aside { padding: 20px; }
+    .box-dashboard, .aluno { border: 1px solid #ddd; margin-bottom: 10px; padding: 10px; border-radius: 8px; background-color: white; }
+
+    img{
+      width: 20px;
+      height: 20px;
+    }
+  </style>
 </head>
 <body>
-  <div class="table-container">
-    <table>
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Matrícula</th>
-          <th>Gênero</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="Nome">Ana Souza</td>
-          <td data-label="Matrícula">20231001</td>
-          <td data-label="Gênero">Feminino</td>
-        </tr>
-        <tr>
-          <td data-label="Nome">Carlos Santos</td>
-          <td data-label="Matrícula">20231002</td>
-          <td data-label="Gênero">Masculino</td>
-        </tr>
-        <tr>
-          <td data-label="Nome">Mariana Oliveira</td>
-          <td data-label="Matrícula">20231003</td>
-          <td data-label="Gênero">Feminino</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-    <script src="teste.js"></script>
+
+<header>
+  <h1>Dashboard SAM</h1>
+  <nav>
+    <a href="#" onclick="loadContent('dashboard')">Dashboard</a>
+    <a href="#" onclick="loadContent('alunos')">Alunos</a>
+    <a href="#" onclick="loadContent('cursos')">Cursos</a>
+  </nav>
+</header>
+
+<main id="main-content">
+  <h2>Bem-vindo ao Dashboard SAM</h2>
+</main>
+
+<aside id="aside-content">
+  <h3>Informações adicionais</h3>
+</aside>
+
+<script>
+  // Objetos com os conteúdos de cada seção
+  const contentData = {
+    dashboard: {
+      main: `
+      <section class="dashboard">
+                    <div class="box-title-dashboard">
+                        <h1>Dashboard</h1>
+                        <!-- <input type="date" name="" id=""> -->
+                    </div>
+                    <div class="flex-box-dashboard">
+                        <div class="box-dashboard">
+                            <div class="box-icon">
+                                <img src="minhafoto.png" alt="" srcset="">
+                            </div><!--box-icon-->
+                            <div class="box-flex-dados">
+                                <div class="dados">
+                                    <span>Professores ativos</span>
+                                    <h3>15</h3>
+                                </div><!--dados-->
+                                <!-- <div class="grafico"></div> -->
+                            </div><!--box-flex-dados-->
+                            <!-- <span >últimas 24 horas</span> -->
+                        </div>
+    
+                        <div class="box-dashboard">
+                            <div class="box-icon">
+                                <img src="../../assets/img/dashboard/student.svg" alt="" srcset="">
+                            </div><!--box-icon-->
+                            <div class="box-flex-dados">
+                                <div class="dados">
+                                    <span>Alunos matriculados</span>
+                                    <h3>358</h3>
+                                </div><!--dados-->
+                                <!-- <div class="grafico"></div> -->
+                            </div><!--box-flex-dados-->
+                            <!-- <span >últimas 24 horas</span> -->
+                        </div>
+    
+                        <div class="box-dashboard">
+                            <div class="box-icon">
+                                <img src="../../assets/img/dashboard/curso.svg" alt="" srcset="">
+                            </div><!--box-icon-->
+                            <div class="box-flex-dados">
+                                <div class="dados">
+                                    <span>cursos ativos</span>
+                                    <h3>10</h3>
+                                </div><!--dados-->
+                                <!-- <div class="grafico"></div> -->
+                            </div><!--box-flex-dados-->
+                            <!-- <span >últimas 24 horas</span> -->
+                        </div>
+                    </div>
+                </section>
+                <section class="section-registro">
+                    <h2>Últimos registros</h2>
+                    <div class="table-container">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Nome</th>
+                              <th>Matrícula</th>
+                              <th>Gênero</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td data-label="Nome">Ana Souza</td>
+                              <td data-label="Matrícula">20231001</td>
+                              <td data-label="Gênero">Feminino</td>
+                            </tr>
+                            <tr>
+                              <td data-label="Nome">Carlos Santos</td>
+                              <td data-label="Matrícula">20231002</td>
+                              <td data-label="Gênero">Masculino</td>
+                            </tr>
+                            <tr>
+                              <td data-label="Nome">Mariana Oliveira</td>
+                              <td data-label="Matrícula">20231003</td>
+                              <td data-label="Gênero">Feminino</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Nome">Ana Souza</td>
+                                <td data-label="Matrícula">20231001</td>
+                                <td data-label="Gênero">Feminino</td>
+                              </tr>
+                              <tr>
+                                <td data-label="Nome">Carlos Santos</td>
+                                <td data-label="Matrícula">20231002</td>
+                                <td data-label="Gênero">Masculino</td>
+                              </tr>
+                              <tr>
+                                <td data-label="Nome">Mariana Oliveira</td>
+                                <td data-label="Matrícula">20231003</td>
+                                <td data-label="Gênero">Feminino</td>
+                              </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                </section>
+      `,
+      aside: `
+        <h3>Últimos Acessos</h3>
+        <div class="aluno">David Richard - 3º Desenvolvimento de Sistemas</div>
+        <div class="aluno">Ana Souza - 2º Redes de Computadores</div>
+      `
+    },
+    alunos: {
+      main: `
+        <section>
+          <h2>Alunos Matriculados</h2>
+          <table>
+            <thead>
+              <tr><th>Nome</th><th>Matrícula</th><th>Gênero</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>David Richard</td><td>20231001</td><td>Masculino</td></tr>
+              <tr><td>Ana Souza</td><td>20231002</td><td>Feminino</td></tr>
+            </tbody>
+          </table>
+        </section>
+      `,
+      aside: `
+        <h3>Alunos com Risco de Evasão</h3>
+        <div class="aluno">Carlos Santos - 3º Desenvolvimento de Sistemas</div>
+      `
+    },
+    cursos: {
+      main: `
+        <section>
+          <h2>Cursos Ativos</h2>
+          <div class="box-dashboard">
+            <h3>Engenharia</h3><p>Alunos: 120</p>
+          </div>
+          <div class="box-dashboard">
+            <h3>Administração</h3><p>Alunos: 80</p>
+          </div>
+        </section>
+      `,
+      aside: `
+        <h3>Informações de Cursos</h3>
+        <p>Total de cursos ativos: 10</p>
+      `
+    }
+  };
+
+  // Função para carregar conteúdo dinamicamente
+  function loadContent(section) {
+    const mainContent = document.getElementById('main-content');
+    const asideContent = document.getElementById('aside-content');
+
+    mainContent.innerHTML = contentData[section].main;
+    asideContent.innerHTML = contentData[section].aside;
+  }
+</script>
+
 </body>
 </html>

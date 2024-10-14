@@ -32,9 +32,10 @@ body{
 }
 
 .global-container{
-    width: 100%;
+    max-width: 1440px;
     height: auto;
     display: flex;
+    margin: 0 auto;
 }
 
 main{
@@ -53,20 +54,23 @@ main{
 
 .dashboard .box-title-dashboard h1{
     margin-bottom: 5px;
-    color: #b82eee;
+    color: #88569c;
+    font-size: 20px;
 }
 
 .flex-box-dashboard{
     display: flex;
     margin-top: 10px;
+    /* justify-content: center; */
 }
+
 
 .flex-box-dashboard .box-dashboard{
     width: 30%;
     /* min-width: 200px; */
     height: auto;
-    background-color: #8b01bf;
-    color: white;
+    background-color: white;
+    /* color: black; */
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
@@ -97,14 +101,14 @@ main{
 .dados span{
     margin-bottom: 10px;
     font-weight: bold;
-    color: white;
+    color: #a165b9;
     font-size:15px;
 }
 
 .dados h3{
     font-size: 40px;
     font-weight: 800;
-    color: white;
+    color: #a165b9;
 }
 
 
@@ -116,7 +120,8 @@ main{
 
 .section-registro h2{
     margin-bottom: 20px;
-    color: #8b01bf;
+    color: #88569c;
+    font-size: 20px;
 }
 
 .table-container {
@@ -134,7 +139,7 @@ main{
   }
   
   thead {
-    background-color: #8b01bf;
+    background-color: #a165b9;
     color: #fff;
   }
   
@@ -142,6 +147,10 @@ main{
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+  }
+
+  tr td{
+    color: #678175;
   }
   
   tbody tr:hover {
@@ -154,7 +163,72 @@ aside{
     width: 30%;
     height: auto;
     background-color: #f6f9f8;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    padding: 50px 10px 50px 10px;
+}
+
+aside .section-aluno{
+    width: 100%;
+    height: auto;
+}
+
+.section-aluno h2{
+    margin-bottom: 20px;
+    font-size: 17px;
+    color: #88569c;
+}
+
+.box-global-alunos{
+    margin-bottom: 40px;
+}
+
+.section-aluno .aluno{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.aluno img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.aluno .box-info-aluno{
+    width: calc(100% - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-info-aluno .box-nome h5{
+    font-size: 15px;
+    font-weight: bold;
+    color: #a165b9;
+}
+
+.box-info-aluno .box-nome span{
+    font-size: 12px;
+    color: #678175;
+}
+
+.aluno .box-info-aluno p{
+    margin-top: -25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #a165b9;
+}
+
+.aluno .box-info-aluno p span{
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 5px;
+    color: #678175;
 }
 
 .section-grafico{

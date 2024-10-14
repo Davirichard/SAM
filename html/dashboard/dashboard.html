@@ -47,12 +47,22 @@
                                 <i class='bx bx-home nav__icon' ></i>
                                 <span class="nav__name">Home</span>
                             </a>
-                            
-                        
-                            <a href="#" class="nav__link active">
-                                <i class='bx bx-trending-up nav__icon'></i>
-                                <span class="nav__name">Dashboard</span>
-                            </a>
+
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link active">
+                                    <i class='bx bx-trending-up nav__icon'></i>
+                                    <span class="nav__name">Dashboard</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+    
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <!-- <a href="#"  onclick="loadContent('dashboard')" class="nav__dropdown-item">Dashboard</a> -->
+                                        <a href="#"  onclick="loadContent('alunos')" class="nav__dropdown-item">Alunos</a>
+                                        <a href="#"  onclick="loadContent('docentes')" class="nav__dropdown-item">Docentes</a>
+                                        <a href="#"  onclick="loadContent('cursos')" class="nav__dropdown-item">Cursos</a>
+                                    </div>
+                                </div>
                         </div>
 
                         <div class="nav__items">
@@ -112,7 +122,7 @@
         </div>
 
         <div class="global-container">
-            <main>
+            <main id="main-content">
                 <section class="dashboard">
                     <div class="box-title-dashboard">
                         <h1>Dashboard</h1>
@@ -210,18 +220,99 @@
                 </section>
             </main>
             
-            <aside>
-                 <section class="section-grafico">
+            <aside >
+                <section class="section-aluno">
+                    <h2>Alunos com matrículas pendentes</h2>
+                    <div class="box-global-alunos">
+                        <div class="aluno">
+                            <img src="../../assets/img/persona/minhafoto.PNG" alt="">
+                            <div class="box-info-aluno">
+                                <div class="box-nome">
+                                    <h5>David Richard</h5>
+                                    <span>3ºDesenvolvimento de sistemas</span>
+                                </div>
+                                <p>RM:<span>000-00-000</span></p>
+                            </div>
+                        </div><!--aluno-->
+
+                        <div class="aluno">
+                            <img src="../../assets/img/persona/christina-wocintechchat-com-SJvDxw0azqw-unsplash (1).jpg" alt="">
+                            <div class="box-info-aluno">
+                                <div class="box-nome">
+                                    <h5>David Richard</h5>
+                                    <span>3ºDesenvolvimento de sistemas</span>
+                                </div>
+                                <p>RM:<span>000-00-000</span></p>
+                            </div>
+                        </div><!--aluno-->
+
+                        <div class="aluno">
+                            <img src="../../assets/img/persona/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash.jpg" alt="">
+                            <div class="box-info-aluno">
+                                <div class="box-nome">
+                                    <h5>David Richard</h5>
+                                    <span>3ºDesenvolvimento de sistemas</span>
+                                </div>
+                                <p>RM:<span>000-00-000</span></p>
+                            </div>
+                        </div><!--aluno-->
+                        <button>Ver todos</button>
+                    </div>
+                </section>
+
+                <section class="section-aluno">
+                    <h2>Alunos com risco de evasão</h2>
+                    <div class="box-global-alunos">
+                        <div class="aluno">
+                            <img src="../../assets/img/persona/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash.jpg" alt="">
+                            <div class="box-info-aluno">
+                                <div class="box-nome">
+                                    <h5>David Richard</h5>
+                                    <span>3ºDesenvolvimento de sistemas</span>
+                                </div>
+                                <p>RM:<span>000-00-000</span></p>
+                            </div>
+                        </div><!--aluno-->
+
+                        <div class="aluno">
+                            <img src="../../assets/img/persona/christina-wocintechchat-com-SJvDxw0azqw-unsplash (1).jpg" alt="">
+                            <div class="box-info-aluno">
+                                <div class="box-nome">
+                                    <h5>David Richard</h5>
+                                    <span>3ºDesenvolvimento de sistemas</span>
+                                </div>
+                                <p>RM:<span>000-00-000</span></p>
+                            </div>
+                        </div><!--aluno-->
+
+                        <div class="aluno">
+                            <img src="../../assets/img/persona/jurica-koletic-7YVZYZeITc8-unsplash.jpg" alt="">
+                            <div class="box-info-aluno">
+                                <div class="box-nome">
+                                    <h5>David Richard</h5>
+                                    <span>3ºDesenvolvimento de sistemas</span>
+                                </div>
+                                <p>RM:<span>000-00-000</span></p>
+                            </div>
+                        </div><!--aluno-->
+                        <button>Ver todos</button>
+                    </div>
+                </section>
+
+                <!-- <section class="section-docentes">
+                    <h2>Docentes</h2>
+                </section> -->
+                 <!-- <section class="section-grafico">
                     <h1>Total de acessos no SAM</h1>
                     <div class="box-grifico">
                         <canvas id="grafico1"></canvas>
                     </div>
-                </section>
+                </section> -->
             </aside>
         </div><!--global-container-->
 
         <script src="../../assets/js/global/navgation.js"></script>
-
+        <script src="../../assets/js/dashboard/spa/spa.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="../../assets/js/dashboard/dashboard.js"></script>
 </body>
