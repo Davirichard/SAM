@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/img/icone_logo 1.png" type="image/png"> <!-- Ícone da aba do navegador -->
+    <!-- <link rel="stylesheet" href="../../assets/css/home/style.css"> -->
+    <link rel="stylesheet" href="../../assets/css/global/navgation.css">
+    <link rel="stylesheet" href="../../assets/css/configuracoes/configuracoes.css">
+
+     <!--========== BOX ICONS ==========-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <title>Bem vindo ao sam</title>
+</head>
+<body>
+    
+     <!--========== HEADER ==========-->
+     <header class="header">
+        <div class="header__container">
+            <img src="../../assets/img/persona/coqui-chang-COP.jpg" alt="" class="header__img">
+
+            <a href="#" class="header__logo">SAM</a>
+
+            <div class="header__search">
+                <input type="search" placeholder="Search" class="header__input">
+                <i class='bx bx-search header__icon'></i>
+            </div>
+
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+        </div>
+    </header>
+
+              <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a href="#" class="nav__link nav__logo">
+                        <i class='bx bxs-disc nav__icon' ></i>
+                        <span class="nav__logo-name">SAM</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">Principais</h3>
+    
+                            <a href="../../html/home/home.html" class="nav__link">
+                                <i class='bx bx-home nav__icon' ></i>
+                                <span class="nav__name">Home</span>
+                            </a>
+                            
+                        
+                            <a href="../../html/dashboard/dashboard.html" class="nav__link">
+                                <i class='bx bx-trending-up nav__icon'></i>
+                                <span class="nav__name">Dashboard</span>
+                            </a>
+                        </div>
+
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">Gerenciamento</h3>
+    
+                        
+                            <a href="../../html/usuarios/gerenuser.html" class="nav__link">
+                                <i class='bx bx-user nav__icon'></i>
+                                <span class="nav__name">Gerenciar Usuários</span>
+                            </a>
+
+                            <a href="../../html/cursos/index.html" class="nav__link">
+                                <i class='bx bx-edit-alt nav__icon'></i>
+                                <span class="nav__name">Gerenciar Cursos</span>
+                            </a>
+                        </div>
+    
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">Comunicações</h3>
+    
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-broadcast nav__icon'></i>
+                                <span class="nav__name">Comunicados</span>
+                            </a>
+
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-archive-in nav__icon' ></i>
+                                <span class="nav__name">Envio de Documentos</span>
+                            </a>
+                        </div>
+
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">Interação</h3>
+
+                            <a href="../../html/chat/index.html" class="nav__link">
+                                <i class='bx bx-conversation nav__icon'></i>
+                                <span class="nav__name">Chat</span>
+                            </a>
+                        </div>
+
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">Configurações</h3>
+
+                            <a href="#" class="nav__link active">
+                                <i class='bx bx-cog nav__icon'></i>
+                                <span class="nav__name">Configurações</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="../../html/login/login.html" class="nav__link nav__logout">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+
+        <main>
+            <div class="container">
+                <div class="box-config">
+                    <h1>Configurações</h1>
+                </div>
+        
+                <nav class="navbar">
+                    <div class="menu-toggle"><i class='bx bx-menu-alt-right'></i></div> <!-- Ícone hambúrguer -->
+                    <ul>
+                        <li><a href="#" class="nav_link active" data-section="perfil">Perfil</a></li>
+                        <li><a href="#" class="nav_link" data-section="sistema">Sistema Acadêmico</a></li>
+                        <li><a href="#" class="nav_link" data-section="notificacoes">Notificações</a></li>
+                        <li><a href="#" class="nav_link" data-section="permissoes">Permissões</a></li>
+                        <li><a href="#" class="nav_link" data-section="relatorios">Relatórios</a></li>
+                        <li><a href="#" class="nav_link" data-section="integracoes">Integrações</a></li>
+                    </ul>
+                </nav>
+        
+                <!-- Seção: Perfil -->
+                <section id="perfil" class="content-section active">
+                    <h2>Seu Perfil</h2>
+                    <span>escolha como você será exibido no SAM</span>
+                    <form>
+                        
+                        <div class="global-flex-perfil">
+
+                            <div class="global-picture" style="display: flex; width: 100%;">
+                                <div class="box-input">
+                                    <label for="nome">Nome:</label>
+                                    <input type="text" id="nome" placeholder="Seu nome completo">
+                                </div><!--box-input-->
+    
+                                <div class="box-input">
+                                    <div class="profile-picture">
+                                        <h5>Foto de perfil</h5>
+                                        <img id="profileImg" alt="Profile Picture" />
+                                        <label for="imageUpload" class="upload-label"><i class='bx bxs-up-arrow-circle'></i></label>
+                                        <input type="file" id="imageUpload" accept="image/*" style="display: none;" />
+                                    </div>
+                                </div><!--box-input-->
+                            </div><!--global-picture-->
+
+                            <button style="margin-left: 10px; margin-top: -70px;"><i class='bx bxs-save'></i>Salvar essas alterações</button>
+
+                            <div class="global-inputs" style="width: 100%; display: flex; flex-wrap: wrap;">
+                                <div class="box-input">
+                                    <label for="email">E-mail:</label>
+                                    <input type="email" id="email" placeholder="seuemail@exemplo.com">
+                                </div><!--box-input-->
+    
+                                <div class="box-input">
+                                    <label for="cargo">Cargo:</label>
+                                    <input type="text" id="cargo" placeholder="Cargo na instituição">
+                                </div><!--box-input-->
+    
+                                <div class="box-input">
+                                    <label for="senha">Alterar Senha:</label>
+                                    <input type="password" id="senha" placeholder="Nova senha">
+                                </div><!--box-input-->
+                            </div><!--global-inputs-->
+                        </div>
+        
+                        <button type="submit"><i class='bx bxs-save'></i>Salvar Alterações</button>
+                    </form>
+                </section>
+        
+                <!-- Seção: Sistema Acadêmico -->
+                <section id="sistema" class="content-section">
+                    <h2>Sistema Acadêmico</h2>
+                    <form>
+
+                        <div class="global-flex-perfil">
+
+                            <div class="box-input">
+                                <label for="ano-letivo">Ano Letivo Ativo:</label>
+                                <select id="ano-letivo">
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                </select>
+                            </div>
+    
+                            <div class="box-input">
+                                <label for="nota-minima">Nota Mínima para Aprovação:</label>
+                                <input type="number" id="nota-minima" placeholder="Ex: 6.0" min="0" max="10">
+                            </div>
+                            
+                            <div class="box-input">
+                                <label for="frequencia-minima">Frequência Mínima (%):</label>
+                            <input type="number" id="frequencia-minima" placeholder="Ex: 75" min="0" max="100">
+                            </div>
+    
+                            <div class="box-input">
+                                <label for="modulos">Módulos Ativos:</label>
+                            <div>
+                                <input type="checkbox" id="financeiro"> Gestão Financeira
+                                <input type="checkbox" id="calendario" checked> Calendário Acadêmico
+                            </div>
+                            </div>
+                        </div>
+        
+                        
+
+                        <button type="submit">Salvar Configurações</button>
+                    </form>
+                </section>
+        
+                <!-- Seção: Notificações -->
+                <section id="notificacoes" class="content-section">
+                    <h2>Notificações</h2>
+                    <form>
+                        <div class="global-flex-perfil">
+                            <div class="box-input">
+                                <label>Canais de Comunicação:</label>
+                                <div>
+                                    <input type="checkbox" id="email-notif" checked> E-mail
+                                    <input type="checkbox" id="sms"> SMS
+                                    <input type="checkbox" id="internas" checked> Notificações Internas
+                                </div>
+                            </div>
+    
+                            <div class="box-input">
+                                <label for="frequencia-notif">Frequência de Notificações:</label>
+                                <select id="frequencia-notif">
+                                    <option>Diária</option>
+                                    <option>Semanal</option>
+                                    <option>Mensal</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit">Salvar Preferências</button>
+                    </form>
+                </section>
+        
+                <!-- Seção: Permissões -->
+                <section id="permissoes" class="content-section">
+                    <h2>Permissões</h2>
+                    <form>
+                        <div class="global-flex-perfil">
+                            <div class="box-input">
+                                <label for="papel">Atribuir Papéis:</label>
+                                <select id="papel">
+                                    <option>Administrador</option>
+                                    <option>Coordenador</option>
+                                    <option>Professor</option>
+                                </select>
+                            </div>
+    
+                            <div class="box-input">
+                                <label for="modulo-acesso">Módulo com Acesso Restrito:</label>
+                                <select id="modulo-acesso">
+                                    <option>Financeiro</option>
+                                    <option>Relatórios</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit">Salvar Permissões</button>
+                    </form>
+                </section>
+        
+                <!-- Seção: Relatórios -->
+                <section id="relatorios" class="content-section">
+                    <h2>Relatórios</h2>
+                    <form>
+                        <div class="global-flex-perfil">
+                            <div class="box-input">
+                                <label for="kpis">Selecionar Indicadores (KPIs):</label>
+                                <div>
+                                    <input type="checkbox" id="matricula" checked> Matrículas
+                                    <input type="checkbox" id="evasao"> Evasão Escolar
+                                    <input type="checkbox" id="desempenho"> Desempenho Médio
+                                </div>
+                            </div>
+    
+                            <div class="box-input">
+                                <label for="frequencia-relatorios">Frequência dos Relatórios:</label>
+                                <select id="frequencia-relatorios">
+                                    <option>Semanal</option>
+                                    <option>Mensal</option>
+                                    <option>Trimestral</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit">Salvar Preferências</button>
+                    </form>
+                </section>
+        
+                <!-- Seção: Integrações -->
+                <section id="integracoes" class="content-section">
+                    <h2>Integrações e Backup</h2>
+                    <form>
+                        <div class="global-flex-perfil">
+                            <div class="box-input">
+                                <label for="google">Conectar ao Google Calendar:</label>
+                                <button type="button">Conectar</button>
+                            </div>
+    
+                            <div class="box-input">
+                                <label for="backup">Agendar Backup Automático:</label>
+                                <select id="backup">
+                                    <option>Diário</option>
+                                    <option>Semanal</option>
+                                    <option>Mensal</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit">Salvar Configurações</button>
+                    </form>
+                </section>
+            </div><!--container-->
+        </main>
+        
+        
+    <!-- <script src="../../assets/js/sidebar/sidebar.js"></script>
+    <script src="../../assets/js/home/bottomnav.js"></script>
+    <script src="../../assets/js/home/menumobile.js"></script> -->
+
+    <script src="../../assets/js/global/navgation.js"></script>
+    <script src="../../assets/js/config/config.js"></script>
+</body>
+</html>
