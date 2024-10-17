@@ -5,8 +5,22 @@
     list-style-type: none;
 }
 
+:root {
+    --color-primary: #2C3E50; /* Azul escuro para textos e títulos */
+    --background-color: #F4F6F8; /* Fundo geral do sistema */
+    --color-cards: #F8F9FA; /* Fundo dos cards */
+    --color-border: #E0E0E0; /* Bordas dos cards e inputs */
+    --color-hover: #EAEDED; /* Fundo ao passar o mouse sobre os cards */
+    --color-success: #27AE60; /* Verde para ações concluídas */
+    --color-warning: #F39C12; /* Laranja/Amarelo para alertas */
+    --color-error: #C0392B; /* Vermelho para erros */
+    --btn-primary-bg: #007ACC; /* Azul médio para botões principais */
+    --btn-primary-hover: #005F99; /* Azul escuro para hover em botões */
+    --text-light: #FFFFFF; /* Texto claro para botões e fundos escuros */
+}
+
 body{
-    background-color: #fafafa;
+    background-color: var(--background-color);
 }
 
 main .container{
@@ -19,9 +33,16 @@ main .container{
     align-items: center;
 }
 
+.box-config h1{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
 .box-config i{
     font-size: 30px;
     margin-left: 10px;
+    color: var(--color-primary);
 }
 
 .navbar {
@@ -55,7 +76,7 @@ main .container{
 }
 
 li .active {
-    color: black !important;
+    color: var(--color-primary) !important;
 }
 
 h2,span{
@@ -63,7 +84,7 @@ h2,span{
 }
 
 h2,h5{
-    color: black;
+    color: var(--color-primary);
 }
 
 /* Estilo mobile */
@@ -214,7 +235,7 @@ form {
 .box-input .upload-label {
     position: absolute;
     cursor: pointer;
-    color: black;
+    color: var(--color-primary);
     border-radius: 100%;
     text-decoration: underline;
     bottom: 0;
@@ -231,18 +252,19 @@ form {
 
 .box-input label{
     font-weight: bold;
-    color: #57585a;
+    color: var(--color-primary);
     margin-bottom: 10px;
 }
 
 form input, select, button {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-border);
+    outline: none;
 }
 
 button {
-    background-color: #323537;
+    background-color: var(--color-primary);
     color: white;
     border: none;
     cursor: pointer;
