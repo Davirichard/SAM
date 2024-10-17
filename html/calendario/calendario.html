@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/img/icone_logo 1.png" type="image/png"> <!-- Ícone da aba do navegador -->
     <!-- <link rel="stylesheet" href="../../assets/css/home/style.css"> -->
-    <link rel="stylesheet" href="assets/css/global/navgation.css">
-    <link rel="stylesheet" href="assets/css/home/style.css">
-    <link rel="stylesheet" href="teste.css">
+    <link rel="stylesheet" href="../../assets/css/global/navgation.css">
+    <!-- <link rel="stylesheet" href="../../assets/css/home/style.css"> -->
+    <link rel="stylesheet" href="../../assets/css/calendario/calendario.css">
 
     <link
     rel="stylesheet"
@@ -20,14 +20,14 @@
      <!--========== BOX ICONS ==========-->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
-    <title>Bem vindo ao sam</title>
+    <title>Calendário de eventos</title>
 </head>
 <body>
     
      <!--========== HEADER ==========-->
      <header class="header">
         <div class="header__container">
-            <!-- <img src="../../assets/img/persona/coqui-chang-COP.jpg" alt="" class="header__img"> -->
+            <img src="../../assets/img/persona/coqui-chang-COP.jpg" alt="" class="header__img">
 
             <a href="#" class="header__logo">SAM</a>
 
@@ -55,11 +55,15 @@
                         <div class="nav__items">
                             <h3 class="nav__subtitle">Principais</h3>
     
-                            <a href="#" class="nav__link active">
+                            <a href="../home/home.html" class="nav__link">
                                 <i class='bx bx-home nav__icon' ></i>
                                 <span class="nav__name">Home</span>
                             </a>
                             
+                            <a href="#" class="nav__link active">
+                                <i class='bx bx-calendar-event  nav__icon'></i>
+                                <span class="nav__name">calendário</span>
+                            </a>
                         
                             <a href="../../html/dashboard/dashboard.html" class="nav__link">
                                 <i class='bx bx-trending-up nav__icon'></i>
@@ -124,104 +128,6 @@
         </div>
 
         <main>
-            <div class="container">
-                <div class="box-welcome">
-                    <div class="title-welcome">
-                        <span>Olá Gabi Gagliassi</span>
-                        <h1>Seja bem vinda </h1>
-                    </div>
-                    <div class="img-welcome"></div>
-                </div>
-    
-                <div class="box-visao-geral">
-                    <div class="box-visao">
-                        <h2>Visão geral</h2>
-                        <!-- <input type="date" name="" id=""> -->
-                    </div>
-    
-                    <div class="flex-visao-geral">
-                        <div class="content-visao" id="content-visao01">
-                            <div class="box-menu"><a href=""><img src="../../assets/img/home/logo/icon-menu.png" alt="" width="30px" style="float: right;"></a></div>
-                            <div class="visao-elements">
-                                <img id="img1" src="../../assets/img/home/logo/Layer_1.png" alt="">
-                                <h4>358</h4>
-                            </div>
-                            <p>Total de estudantes </p>
-                        </div>
-    
-                        <div class="content-visao" id="content-visao02">
-                            <div class="box-menu"><a href=""><img src="../../assets/img/home/logo/icon-menu.png" alt="" width="30px" style="float: right;"></a></div>
-                            <div class="visao-elements">
-                                <img id="img2" src="../../assets/img/home/logo/sala-de-aula (3) 1.png" alt="">
-                                <h4>15</h4>
-                            </div>
-                            <p>Total de docentes   </p>
-                        </div>
-    
-                        <div class="content-visao" id="content-visao03">
-                            <div class="box-menu"><a href=""><img src="../../assets/img/home/logo/icon-menu.png" alt="" width="30px" style="float: right;"></a></div>
-                            <div class="visao-elements img3">
-                                <img id="img3" src="../../assets/img/home/logo/Layer_1-1.png" alt="">
-                                <h4>150</h4>
-                            </div>
-                            <p>Total de responsáveis   </p>
-                        </div>
-                    </div>
-                </div> <!--box-visão-geral-->
-                <section class="box-registro">
-                    <div class="box-flex-registro">
-
-                        <div class="grafico">
-                            <h2>Perfis <br>incompletos</h2>
-                            <img src="../../assets/img/home/logo/grafic.png" alt="">
-                            <span>63.8%</span>
-                        </div>
-
-                        <div class="registro">
-                            <h2>últimos  registros </h2>
-
-                            <table>
-                                <div class="line"></div>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>Matricula</th>
-                                    <th>Genero</th>
-                                </tr>
-                                <tr style=" margin-top: 100px;">
-                                    <td>Mark Santiago</td>
-                                    <td>000-00</td>
-                                    <td>M</td>
-                                </tr>
-                                <tr>
-                                    <td>Mark Santiago</td>
-                                    <td>000-00</td>
-                                    <td>M</td>
-                                </tr>
-                                <tr>
-                                    <td>Mark Santiago</td>
-                                    <td>000-00</td>
-                                    <td>M</td>
-                                </tr>
-                                <tr style=" margin-top: 100px;">
-                                    <td>Mark Santiago</td>
-                                    <td>000-00</td>
-                                    <td>M</td>
-                                </tr>
-                                <tr>
-                                    <td>Mark Santiago</td>
-                                    <td>000-00</td>
-                                    <td>M</td>
-                                </tr>
-                                <tr>
-                                    <td>Mark Santiago</td>
-                                    <td>000-00</td>
-                                    <td>M</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div><!--box-flex-registro-->
-                </section>
-            </div><!--container-->
             <div class="container calendar-container">
                 <div class="left">
                   <div class="calendar">
@@ -311,7 +217,7 @@
     <script src="../../assets/js/home/bottomnav.js"></script>
     <script src="../../assets/js/home/menumobile.js"></script> -->
 
-    <script src="assets/js/global/navgation.js"></script>
-    <script src="teste.js"></script>
+    <script src="../../assets/js/global/navgation.js"></script>
+    <script src="../../assets/js/calendario/calendario.js"></script>
 </body>
 </html>
