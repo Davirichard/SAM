@@ -5,12 +5,23 @@
     list-style-type: none;
 }
 
+body{
+    background-color: #fafafa;
+}
+
 main .container{
     padding: 50px 20px;
 }
 
 .box-config{
     margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.box-config i{
+    font-size: 30px;
+    margin-left: 10px;
 }
 
 .navbar {
@@ -47,12 +58,26 @@ li .active {
     color: black !important;
 }
 
+h2,span{
+    margin-left: 10px;
+}
+
 h2,h5{
     color: black;
 }
 
 /* Estilo mobile */
 @media (max-width: 1116px) {
+    .box-config{
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .bx-menu-alt-right{
+        font-size: 30px;
+    }
+
     .navbar{
         height: 50px;
     }
@@ -137,15 +162,23 @@ form {
     gap: 10px;
 }
 
+.global-picture{
+    display: flex; 
+    width: 100%;
+}
+
 #perfil h2{
     margin-bottom: 20px;
     margin-top: 50px;
-    margin-left: 10px;
+}
+
+.button-picture{
+    margin-left: 10px; 
+    margin-top: -70px;
 }
 
 #perfil span{
     color: #858789;
-    margin-left: 10px;
 }
 
 .global-flex-perfil{
@@ -214,6 +247,53 @@ button {
     cursor: pointer;
     align-items: center;
     margin: 0 10px;
+}
+
+.box-global-check{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.box-global-check .box-check{
+    margin: 0 10px;
+    color: #57585a;
+}
+
+@media screen and (max-width:480px){
+
+    main .container{
+        padding: 50px 10px;
+    }
+
+    h2,span{
+        margin-left: 0;
+    }
+
+
+    
+.global-flex-perfil .box-input{
+    width: 100%;
+    min-width: 200px;
+    margin: 20px 0;
+}
+
+.global-picture{
+    flex-direction: column-reverse;
+}
+
+.global-picture .nome{
+    margin-top: 0;
+}
+
+.button-picture{
+    margin-left: 0; 
+    margin-top: 0;
+}
+
+button,input {
+    margin: 0 0;
+}
 }
 
 /* button:hover {

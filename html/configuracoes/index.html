@@ -118,6 +118,7 @@
             <div class="container">
                 <div class="box-config">
                     <h1>Configurações</h1>
+                    <i class='bx bxs-cog'></i>
                 </div>
         
                 <nav class="navbar">
@@ -140,8 +141,8 @@
                         
                         <div class="global-flex-perfil">
 
-                            <div class="global-picture" style="display: flex; width: 100%;">
-                                <div class="box-input">
+                            <div class="global-picture">
+                                <div class="box-input nome">
                                     <label for="nome">Nome:</label>
                                     <input type="text" id="nome" placeholder="Seu nome completo">
                                 </div><!--box-input-->
@@ -156,7 +157,7 @@
                                 </div><!--box-input-->
                             </div><!--global-picture-->
 
-                            <button style="margin-left: 10px; margin-top: -70px;"><i class='bx bxs-save'></i>Salvar essas alterações</button>
+                            <button class="button-picture"><i class='bx bxs-save'></i>Salvar essas alterações</button>
 
                             <div class="global-inputs" style="width: 100%; display: flex; flex-wrap: wrap;">
                                 <div class="box-input">
@@ -208,15 +209,12 @@
     
                             <div class="box-input">
                                 <label for="modulos">Módulos Ativos:</label>
-                            <div>
-                                <input type="checkbox" id="financeiro"> Gestão Financeira
-                                <input type="checkbox" id="calendario" checked> Calendário Acadêmico
+                            <div class="box-global-check">
+                                <div class="box-check"><input type="checkbox" id="financeiro"> Gestão Financeira</div>
+                                <div class="box-check"><input type="checkbox" id="calendario"> Calendário Acadêmico</div>
                             </div>
                             </div>
                         </div>
-        
-                        
-
                         <button type="submit">Salvar Configurações</button>
                     </form>
                 </section>
@@ -228,10 +226,10 @@
                         <div class="global-flex-perfil">
                             <div class="box-input">
                                 <label>Canais de Comunicação:</label>
-                                <div>
-                                    <input type="checkbox" id="email-notif" checked> E-mail
-                                    <input type="checkbox" id="sms"> SMS
-                                    <input type="checkbox" id="internas" checked> Notificações Internas
+                                <div class="box-global-check">
+                                    <div class="box-check"><input type="checkbox" id="email-notif" checked> E-mail</div>
+                                    <div class="box-check"><input type="checkbox" id="sms"> SMS</div>
+                                    <div class="box-check"> <input type="checkbox" id="internas" checked> Notificações Internas</div>
                                 </div>
                             </div>
     
@@ -282,10 +280,10 @@
                         <div class="global-flex-perfil">
                             <div class="box-input">
                                 <label for="kpis">Selecionar Indicadores (KPIs):</label>
-                                <div>
-                                    <input type="checkbox" id="matricula" checked> Matrículas
-                                    <input type="checkbox" id="evasao"> Evasão Escolar
-                                    <input type="checkbox" id="desempenho"> Desempenho Médio
+                                <div class="box-global-check">
+                                    <div class="box-check"><input type="checkbox" id="matricula" checked> Matrículas</div>
+                                    <div class="box-check">  <input type="checkbox" id="evasao"> Evasão Escolar</div>
+                                    <div class="box-check"><input type="checkbox" id="desempenho"> Desempenho Médio</div>
                                 </div>
                             </div>
     
