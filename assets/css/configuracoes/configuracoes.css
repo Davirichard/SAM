@@ -108,6 +108,7 @@ h2,h5{
 
     .navbar ul.open {
         max-height: 400px; /* Define um limite para expandir o menu */
+        /* padding: 5px 0; */
     }
 
     .navbar .menu-toggle {
