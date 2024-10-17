@@ -575,4 +575,25 @@
   .credits a:hover {
     text-decoration: underline;
   }
+
+@media screen and (max-width: 410px){
+
+  .right .today-date .event-day {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
   
+}
+
+@media screen and (max-width: 360px){
+
+  .right .today-date .event-day {
+    font-size: 1.2rem;
+}
+
+.right .today-date .event-date {
+  font-size: 0.7rem;
+
+}
+  
+}
