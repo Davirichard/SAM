@@ -597,3 +597,12 @@
 }
   
 }
+
+@media screen and (max-width:1450px){
+  main{
+    transform: scale(0.8); /* Reduz para 80% */
+    transform-origin: top left; /* Define a origem do zoom */
+    width: 125%; /* Compensa o espaço reduzido */
+    overflow-x: hidden; /* Evita barra horizontal */
+  }
+}

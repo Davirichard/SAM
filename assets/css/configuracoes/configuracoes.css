@@ -19,10 +19,6 @@
     --text-light: #FFFFFF; /* Texto claro para botões e fundos escuros */
 }
 
-body{
-    background-color: var(--background-color);
-}
-
 main .container{
     padding: 50px 20px;
 }
@@ -318,6 +314,7 @@ button,input {
     margin: 0 0;
 }
 }
+
 
 /* button:hover {
     background-color: #323537;
