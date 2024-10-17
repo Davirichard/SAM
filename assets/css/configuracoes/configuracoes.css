@@ -234,7 +234,7 @@ form {
     margin-bottom: 10px;
 }
 
-input, select, button {
+form input, select, button {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -246,7 +246,7 @@ button {
     border: none;
     cursor: pointer;
     align-items: center;
-    margin: 0 10px;
+    /* margin: 0 10px; */
 }
 
 .box-global-check{
