@@ -23,53 +23,41 @@ let month = today.getMonth();
 let year = today.getFullYear();
 
 const months = [
-  "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-  "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+  "Janeiro",
+  "Fevereiro",
+  "Março",
+  "Abril",
+  "Maio",
+  "Junho",
+  "Julho",
+  "Agosto",
+  "Setembro",
+  "Outubro",
+  "Novembro",
+  "Dezembro",
 ];
 
-// const eventsArr = [
-//   {
-//     day: 13,
-//     month: 11,
-//     year: 2022,
-//     events: [
-//       {
-//         title: "Event 1 lorem ipsun dolar sit genfa tersd dsad ",
-//         time: "10:00 AM",
-//       },
-//       {
-//         title: "Event 2",
-//         time: "11:00 AM",
-//       },
-//     ],
-//   },
-// ];
 const eventsArr = [];
 getEvents();
 console.log(eventsArr);
 
-// Função para adicionar dias ao calendário, incluindo dias do mês anterior e próximo
 function initCalendar() {
-  const firstDay = new Date(year, month, 1);  // Primeiro dia do mês
-  const lastDay = new Date(year, month + 1, 0);  // Último dia do mês
-  const prevLastDay = new Date(year, month, 0);  // Último dia do mês anterior
-  const prevDays = prevLastDay.getDate();  // Total de dias do mês anterior
-  const lastDate = lastDay.getDate();  // Total de dias do mês atual
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month + 1, 0);
+  const prevLastDay = new Date(year, month, 0);
+  const prevDays = prevLastDay.getDate();
+  const lastDate = lastDay.getDate();
+  const day = firstDay.getDay();
+  const nextDays = 7 - lastDay.getDay() - 1;
 
-  // Ajusta o início da semana para segunda-feira
-  const day = (firstDay.getDay() + 6) % 7;  
-  const nextDays = 7 - (lastDay.getDay() + 1);  // Dias para completar a semana
-
-  date.innerHTML = `${months[month]} de ${year}`;  // Exibe mês e ano no formato brasileiro
+  date.innerHTML = months[month] + " " + year;
 
   let days = "";
 
-  // Adiciona os dias do mês anterior
   for (let x = day; x > 0; x--) {
     days += `<div class="day prev-date">${prevDays - x + 1}</div>`;
   }
 
-  // Adiciona os dias do mês atual
   for (let i = 1; i <= lastDate; i++) {
     let event = false;
     eventsArr.forEach((eventObj) => {
@@ -90,26 +78,27 @@ function initCalendar() {
       activeDay = i;
       getActiveDay(i);
       updateEvents(i);
-
-      days += event
-        ? `<div class="day today active event">${i}</div>`
-        : `<div class="day today active">${i}</div>`;
+      if (event) {
+        days += `<div class="day today active event">${i}</div>`;
+      } else {
+        days += `<div class="day today active">${i}</div>`;
+      }
     } else {
-      days += event
-        ? `<div class="day event">${i}</div>`
-        : `<div class="day">${i}</div>`;
+      if (event) {
+        days += `<div class="day event">${i}</div>`;
+      } else {
+        days += `<div class="day ">${i}</div>`;
+      }
     }
   }
 
-  // Adiciona os dias do próximo mês
   for (let j = 1; j <= nextDays; j++) {
     days += `<div class="day next-date">${j}</div>`;
   }
-
   daysContainer.innerHTML = days;
   addListner();
 }
-// Função para navegar para o mês anterior
+
 function prevMonth() {
   month--;
   if (month < 0) {
@@ -119,7 +108,6 @@ function prevMonth() {
   initCalendar();
 }
 
-// Função para navegar para o próximo mês
 function nextMonth() {
   month++;
   if (month > 11) {
@@ -128,6 +116,7 @@ function nextMonth() {
   }
   initCalendar();
 }
+
 
 // Adiciona eventos de clique nos botões de navegação
 prev.addEventListener("click", prevMonth);
