@@ -1,171 +1,75 @@
 
-:root {
-  --color-primary: #2C3E50; /* Azul escuro para textos e títulos */
-  --background-color: #F4F6F8; /* Fundo geral do sistema */
-  --color-cards: #F8F9FA; /* Fundo dos cards */
-  --color-border: #E0E0E0; /* Bordas dos cards e inputs */
-  --color-hover: #EAEDED; /* Fundo ao passar o mouse sobre os cards */
-  --color-success: #27AE60; /* Verde para ações concluídas */
-  --color-warning: #F39C12; /* Laranja/Amarelo para alertas */
-  --color-error: #C0392B; /* Vermelho para erros */
-  --btn-primary-bg: #007ACC; /* Azul médio para botões principais */
-  --btn-primary-hover: #005F99; /* Azul escuro para hover em botões */
-  --text-light: #FFFFFF; /* Texto claro para botões e fundos escuros */
-  --primary-clr: #b38add;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-/* ===== Tooltip ===== */
-.tooltip {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.tooltip-text {
-  visibility: hidden;
-  width: 100px;
-  background-color: black;
-  color: white;
-  font-size: 12px;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  top: 125%; /* Exibe abaixo do ícone */
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s;
-  z-index: 1;
-}
-
-/* Setinha do tooltip */
-.tooltip-text::after {
-  content: "";
-  position: absolute;
-  bottom: 100%; /* Seta aponta para cima */
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 5px;
-  border-style: solid;
-  border-color: black transparent transparent transparent;
-}
-
-/* Exibir o tooltip ao passar o mouse */
-.tooltip:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* ===== Ícone de Notificação ===== */
-.bell-icon {
-  font-size: 26px;
-  cursor: pointer;
-  position: relative;
-}
-
-.bell-icon i {
-  font-size: 22px;
-}
-
-.notification-container{
-  margin-bottom: -3px;
-  margin-right: 20px;
-
-  /* position: relative;
-  bottom: -2px; */
-}
-
-.notification-count {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  width: 18px;
-  height: 18px;
+.header__img {
+  min-width: 40px !important;
+  height: 40px;
   border-radius: 50%;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* ===== Painel de Notificações ===== */
-.notification-panel {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  width: 300px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-20px);
-  transition: all 0.3s ease;
-}
-
-/* Exibir o painel quando ativo */
-.notification-panel.active {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-/* ===== Seções do Painel ===== */
-.alerts-section, .notifications-section {
-  padding: 10px;
-}
-
-.alerts-section h4 {
-  background-color: #ffeeba;
-  color: #856404;
-  padding: 10px;
-  margin: 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.notifications-section h4 {
-  background-color: #f0f0f0;
-  padding: 10px;
-  margin: 0;
-  border-bottom: 1px solid #ddd;
-}
-
-/* ===== Listas de Notificações e Alertas ===== */
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  padding: 8px 0;
-  border-bottom: 1px solid #ddd;
-}
-
-
-.global-profile{
-  background-color: green;
+/* Dropdown Geral */
+.dropdown {
   position: relative;
+  margin-left: 20px;
 }
 
-.global-profile .dropdown-profile{
+.notification-dropdown{
+  margin-bottom: -7px;
+} 
+
+.notification-dropdown .dropdown-content {
+  background-color: white;
   position: absolute;
-  top: 100%;
-  right:10%;
-  width: 320px;
+  top: 49px;
+  right: -106px;
 }
 
-.dropdown-profile .sub-menu{
-  background-color: pink;
-  padding: 20px;
+/* Estilo básico do conteúdo do dropdown */
+.dropdown-content {
+  position: absolute;
+  top: 56px;
+  right: -44px;
+  background-color: white;
+  color: black;
+  width: 250px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0 15px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+  visibility: hidden; /* Esconde visualmente enquanto fechado */
+}
+
+/* Quando o Dropdown Está Aberto */
+.show {
+  opacity: 1;
+  max-height: 500px; /* Limite máximo do dropdown */
+  transform: translateY(0);
+  visibility: visible; /* Mostra o dropdown */
+  padding: 15px; /* Ajusta o padding para evitar conteúdo comprimido */
+}
+
+.bxs-bell {
+  font-size: 25px;
+}
+
+/* Contador de notificações */
+.notification-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
 }
