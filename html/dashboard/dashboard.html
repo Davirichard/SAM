@@ -53,23 +53,11 @@
                                 <span class="nav__name">calendário</span>
                             </a>
 
-                            <div class="nav__dropdown">
-                                <a href="#" class="nav__link active">
-                                    <i class='bx bx-trending-up nav__icon'></i>
-                                    <span class="nav__name">Dashboard</span>
-                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
-                                </a>
-    
-                                <div class="nav__dropdown-collapse">
-                                    <div class="nav__dropdown-content">
-                                        <!-- <a href="#"  onclick="loadContent('dashboard')" class="nav__dropdown-item">Dashboard</a> -->
-                                        <a href="#"  onclick="loadContent('alunos')" class="nav__dropdown-item">Alunos</a>
-                                        <a href="#"  onclick="loadContent('docentes')" class="nav__dropdown-item">Docentes</a>
-                                        <a href="#"  onclick="loadContent('cursos')" class="nav__dropdown-item">Cursos</a>
-                                    </div>
-                                </div>
-                        </div>
-
+                            <a href="#" class="nav__link active">
+                                <i class='bx bx-trending-up nav__icon'></i>
+                                <span class="nav__name">Dashboard</span>
+                            </a>
+                            
                         <div class="nav__items">
                             <h3 class="nav__subtitle">Gerenciamento</h3>
     
@@ -127,102 +115,119 @@
         </div>
 
         <div class="global-container">
-            <main id="main-content">
-                <section class="dashboard">
-                    <div class="box-title-dashboard">
+           
+            <main>
+                <div class="box-title-dashboard">
+                    <div class="flexh1">
                         <h1>Dashboard</h1>
-                        <!-- <input type="date" name="" id=""> -->
+                        <i class='bx bx-trending-up nav__icon'></i>
                     </div>
-                    <div class="flex-box-dashboard">
-                        <div class="box-dashboard">
-                            <div class="box-icon">
-                                <img src="../../assets/img/dashboard/docente02.svg" alt="" srcset="">
-                            </div><!--box-icon-->
-                            <div class="box-flex-dados">
-                                <div class="dados">
-                                    <span>Professores ativos</span>
-                                    <h3>15</h3>
-                                </div><!--dados-->
-                                <!-- <div class="grafico"></div> -->
-                            </div><!--box-flex-dados-->
-                            <!-- <span >últimas 24 horas</span> -->
+                    <nav class="navbar">
+                        <div class="menu-toggle"><i class='bx bx-menu-alt-right'></i></div> <!-- Ícone hambúrguer -->
+                        <ul>
+                            <li><a href="#" onclick="loadContent('coordedenador')" class="nav_link active" data-section="coordedenador">Coordenador</a></li>
+                            <li><a href="#" onclick="loadContent('professor')" class="nav_link" data-section="professor">Professor</a></li>
+                            <li><a href="#" onclick="loadContent('aluno')" class="nav_link" data-section="aluno">Aluno</a></li>
+                            <li><a href="#" onclick="loadContent('curso')" class="nav_link" data-section="cursos">Curso</a></li>
+                            <!-- <li><a href="#" class="nav_link" data-section="relatorios">Relatórios</a></li>
+                            <li><a href="#" class="nav_link" data-section="integracoes">Integrações</a></li> -->
+                        </ul>
+                    </nav>
+                    <!-- <input type="date" name="" id=""> -->
+                </div>
+                <div class="container-content" id="main-content">
+                    <section class="dashboard">
+                        <div class="flex-box-dashboard">
+                            <div class="box-dashboard">
+                                <div class="box-icon">
+                                    <img src="../../assets/img/dashboard/docente02.svg" alt="" srcset="">
+                                </div><!--box-icon-->
+                                <div class="box-flex-dados">
+                                    <div class="dados">
+                                        <span>Professores ativos</span>
+                                        <h3>15</h3>
+                                    </div><!--dados-->
+                                    <!-- <div class="grafico"></div> -->
+                                </div><!--box-flex-dados-->
+                                <!-- <span >últimas 24 horas</span> -->
+                            </div>
+        
+                            <div class="box-dashboard">
+                                <div class="box-icon">
+                                    <img src="../../assets/img/dashboard/student.svg" alt="" srcset="">
+                                </div><!--box-icon-->
+                                <div class="box-flex-dados">
+                                    <div class="dados">
+                                        <span>Alunos matriculados</span>
+                                        <h3>358</h3>
+                                    </div><!--dados-->
+                                    <!-- <div class="grafico"></div> -->
+                                </div><!--box-flex-dados-->
+                                <!-- <span >últimas 24 horas</span> -->
+                            </div>
+        
+                            <div class="box-dashboard">
+                                <div class="box-icon">
+                                    <img src="../../assets/img/dashboard/curso.svg" alt="" srcset="">
+                                </div><!--box-icon-->
+                                <div class="box-flex-dados">
+                                    <div class="dados">
+                                        <span>cursos ativos</span>
+                                        <h3>10</h3>
+                                    </div><!--dados-->
+                                    <!-- <div class="grafico"></div> -->
+                                </div><!--box-flex-dados-->
+                                <!-- <span >últimas 24 horas</span> -->
+                            </div>
                         </div>
-    
-                        <div class="box-dashboard">
-                            <div class="box-icon">
-                                <img src="../../assets/img/dashboard/student.svg" alt="" srcset="">
-                            </div><!--box-icon-->
-                            <div class="box-flex-dados">
-                                <div class="dados">
-                                    <span>Alunos matriculados</span>
-                                    <h3>358</h3>
-                                </div><!--dados-->
-                                <!-- <div class="grafico"></div> -->
-                            </div><!--box-flex-dados-->
-                            <!-- <span >últimas 24 horas</span> -->
-                        </div>
-    
-                        <div class="box-dashboard">
-                            <div class="box-icon">
-                                <img src="../../assets/img/dashboard/curso.svg" alt="" srcset="">
-                            </div><!--box-icon-->
-                            <div class="box-flex-dados">
-                                <div class="dados">
-                                    <span>cursos ativos</span>
-                                    <h3>10</h3>
-                                </div><!--dados-->
-                                <!-- <div class="grafico"></div> -->
-                            </div><!--box-flex-dados-->
-                            <!-- <span >últimas 24 horas</span> -->
-                        </div>
-                    </div>
-                </section>
-                <section class="section-registro">
-                    <h3>Últimos registros</h3>
-                    <div class="table-container">
-                        <table>
-                          <thead>
-                            <tr>
-                              <th>Nome</th>
-                              <th>Matrícula</th>
-                              <th>Gênero</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td data-label="Nome">Ana Souza</td>
-                              <td data-label="Matrícula">20231001</td>
-                              <td data-label="Gênero">Feminino</td>
-                            </tr>
-                            <tr>
-                              <td data-label="Nome">Carlos Santos</td>
-                              <td data-label="Matrícula">20231002</td>
-                              <td data-label="Gênero">Masculino</td>
-                            </tr>
-                            <tr>
-                              <td data-label="Nome">Mariana Oliveira</td>
-                              <td data-label="Matrícula">20231003</td>
-                              <td data-label="Gênero">Feminino</td>
-                            </tr>
-                            <tr>
-                                <td data-label="Nome">Ana Souza</td>
-                                <td data-label="Matrícula">20231001</td>
-                                <td data-label="Gênero">Feminino</td>
-                              </tr>
-                              <tr>
-                                <td data-label="Nome">Carlos Santos</td>
-                                <td data-label="Matrícula">20231002</td>
-                                <td data-label="Gênero">Masculino</td>
-                              </tr>
-                              <tr>
-                                <td data-label="Nome">Mariana Oliveira</td>
-                                <td data-label="Matrícula">20231003</td>
-                                <td data-label="Gênero">Feminino</td>
-                              </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                </section>
+                    </section>
+                    <section class="section-registro">
+                        <h3>Últimos registros</h3>
+                        <div class="table-container">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>Nome</th>
+                                  <th>Matrícula</th>
+                                  <th>Gênero</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td data-label="Nome">Ana Souza</td>
+                                  <td data-label="Matrícula">20231001</td>
+                                  <td data-label="Gênero">Feminino</td>
+                                </tr>
+                                <tr>
+                                  <td data-label="Nome">Carlos Santos</td>
+                                  <td data-label="Matrícula">20231002</td>
+                                  <td data-label="Gênero">Masculino</td>
+                                </tr>
+                                <tr>
+                                  <td data-label="Nome">Mariana Oliveira</td>
+                                  <td data-label="Matrícula">20231003</td>
+                                  <td data-label="Gênero">Feminino</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Nome">Ana Souza</td>
+                                    <td data-label="Matrícula">20231001</td>
+                                    <td data-label="Gênero">Feminino</td>
+                                  </tr>
+                                  <tr>
+                                    <td data-label="Nome">Carlos Santos</td>
+                                    <td data-label="Matrícula">20231002</td>
+                                    <td data-label="Gênero">Masculino</td>
+                                  </tr>
+                                  <tr>
+                                    <td data-label="Nome">Mariana Oliveira</td>
+                                    <td data-label="Matrícula">20231003</td>
+                                    <td data-label="Gênero">Feminino</td>
+                                  </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                    </section>
+                </div><!--container-content-->
             </main>
             
             <aside >
@@ -320,5 +325,6 @@
         <script src="../../assets/js/dashboard/spa/spa.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="../../assets/js/dashboard/dashboard.js"></script>
+        <script src="../../assets/js/dashboard/navdash.js"></script>
 </body>
 </html>
