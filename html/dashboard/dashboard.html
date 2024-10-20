@@ -12,23 +12,51 @@
     <title>Dashboard SAM</title>
 </head>
 <body>
-      <!--========== HEADER ==========-->
-      <header class="header">
-        <div class="header__container">
-            <img src="../../assets/img/persona/coqui-chang-COP.jpg" alt="" class="header__img">
-
-            <a href="#" class="header__logo">SAM</a>
-
-            <div class="header__search">
-                <input type="search" placeholder="Search" class="header__input">
-                <i class='bx bx-search header__icon'></i>
-            </div>
-
-            <div class="header__toggle">
-                <i class='bx bx-menu' id="header-toggle"></i>
-            </div>
-        </div>
-    </header>
+ <!--========== HEADER ==========-->
+    <header class="header">
+      <div class="header__container">
+          <a href="#" class="header__logo">SAM</a>
+  
+          <div class="header__search">
+              <i class='bx bx-search header__icon'></i>
+              <input type="search" placeholder="Search" class="header__input">
+          </div>
+  
+          <!-- Notificações -->
+          <div class="dropdown notification-dropdown">
+              <div class="dropdown-toggle" id="notification-toggle">
+                  <span class="notification-count">3</span>
+                  <i class='bx bxs-bell'></i>
+              </div>
+              <div class="dropdown-content" id="notification-content">
+                  <h4>Alertas</h4>
+                  <ul>
+                      <li>Aviso: Prazo de matrícula termina em 2 dias!</li>
+                  </ul>
+                  <h4>Notificações</h4>
+                  <ul>
+                      <li>Mensagem de novo aluno.</li>
+                      <li>Curso atualizado.</li>
+                      <li>Aviso de manutenção programada.</li>
+                  </ul>
+              </div>
+          </div>
+  
+          <!-- Perfil -->
+          <div class="dropdown profile-dropdown" style="margin: 0 20px;">
+              <img src="../../assets/img/persona/coqui-chang-COP.jpg" alt="Profile" class="header__img" id="profile-toggle">
+              <div class="dropdown-content" id="profile-content">
+                  <p>Nome: João Silva</p>
+                  <p>Email: joao@email.com</p>
+                  <button class="logout-btn">Logout</button>
+              </div>
+          </div>
+  
+          <div class="header__toggle">
+              <i class='bx bx-menu' id="header-toggle"></i>
+          </div>
+      </div>
+  </header>
 
                <!--========== NAV ==========-->
         <div class="nav" id="navbar">
@@ -326,5 +354,6 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="../../assets/js/dashboard/dashboard.js"></script>
         <script src="../../assets/js/dashboard/navdash.js"></script>
+        <script src="../../assets/js/global/dropdown.js"></script>
 </body>
 </html>

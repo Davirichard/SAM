@@ -51,6 +51,10 @@ body {
   color: var(--text-color);
 }
 
+.header__search{
+  margin: 0 auto;
+}
+
 h3 {
   margin: 0;
 }
@@ -337,11 +341,12 @@ img {
   }
 }
 
-@media screen and (max-width: 768px){
+ @media screen and (max-width: 768px){
   body {
     padding: 0 0 0 0;
   }
-}
+} 
+
 
 @media screen and (min-width: 768px) {
   body {
@@ -389,7 +394,6 @@ img {
     transition: .3s;
   }
   
-  
   /* Navbar expanded */
   .nav:hover {
     width: var(--nav-width);
@@ -408,6 +412,7 @@ img {
   .nav:hover .nav__dropdown-icon {
     opacity: 1;
   }
+  
 }
 
 @media screen and (min-width: 400px){

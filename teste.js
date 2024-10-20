@@ -42,3 +42,30 @@ profileToggle.addEventListener('click', (e) => {
 // Fechar ao clicar fora
 document.addEventListener('click', closeAllDropdowns);
 
+const searchBox = document.querySelector('.header__search');
+const searchInput = searchBox.querySelector('.header__input');
+const toggleIcon = searchBox.querySelector('.header__icon');
+
+// Função para abrir/fechar o search box
+toggleIcon.addEventListener('click', () => {
+    if (searchBox.classList.contains('expanded')) {
+        searchBox.classList.remove('expanded');
+        searchInput.value = ''; // Limpa o campo ao fechar
+        searchInput.style.display = 'none'; // Oculta o input
+        toggleIcon.style.transform = 'rotate(0deg)'; // Reseta a rotação do ícone
+    } else {
+        searchBox.classList.add('expanded');
+        searchInput.style.display = 'block'; // Exibe o input ao expandir
+        searchInput.focus(); // Coloca o cursor no input
+    }
+});
+
+// Fechar o search ao clicar fora dele
+document.addEventListener('click', (e) => {
+    if (!searchBox.contains(e.target) && searchBox.classList.contains('expanded')) {
+        searchBox.classList.remove('expanded');
+        searchInput.value = ''; // Limpa o campo ao fechar
+        searchInput.style.display = 'none'; // Oculta o input
+        toggleIcon.style.transform = 'rotate(0deg)'; // Reseta a rotação do ícone
+    }
+});
