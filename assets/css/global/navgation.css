@@ -266,50 +266,95 @@ img {
 
 /* ========== AQUI COMEÇA O CSS DO DROPDOW (GLOBAL) ==========*/
 
+/* Estilo para Dropdowns */
+.notification-dropdown{
+  margin-bottom: -6px
+}
 
-/* Dropdown Geral */
 .dropdown {
   position: relative;
-  margin-left: 20px;
 }
 
-.notification-dropdown{
-  margin-bottom: -7px;
-} 
-
-.notification-dropdown .dropdown-content {
-  background-color: white;
-  position: absolute;
-  top: 49px;
-  right: -80px;
-}
-
-/* Estilo básico do conteúdo do dropdown */
 .dropdown-content {
+  display: none;
   position: absolute;
-  top: 56px;
-  right: -22px;
-  background-color: white;
-  color: black;
-  width: 250px;
+  top: calc(100% + 5px); /* Anima debaixo do elemento */
+  left: -240px; /* Ajuste a posição conforme necessário */
+  width: 300px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 0 15px;
+  padding: 10px;
+  z-index: 10;
   opacity: 0;
-  max-height: 0;
-  overflow: hidden;
   transform: translateY(-10px);
-  transition: all 0.4s ease;
-  visibility: hidden; /* Esconde visualmente enquanto fechado */
+  transition: all 0.3s ease;
 }
 
-/* Quando o Dropdown Está Aberto */
-.show {
+.dropdown-content.show {
+  display: block;
   opacity: 1;
-  max-height: 500px; /* Limite máximo do dropdown */
   transform: translateY(0);
-  visibility: visible; /* Mostra o dropdown */
-  padding: 15px; /* Ajusta o padding para evitar conteúdo comprimido */
+}
+
+/* Sub-dropdown */
+.sub-dropdown {
+  display: none;
+  position: absolute; /* Torna o sub-dropdown independente */
+  top:105px; /* Coloca abaixo da opção */
+  left: 0; /* Alinha à esquerda da opção */
+  width: 200px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* border-radius: 5px; */
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.sub-drop-localiza{
+  background-color: white;
+  position: absolute; /* Torna o sub-dropdown independente */
+  top:140px; /* Coloca abaixo da opção */
+  left: 0; /* Alinha à esquerda da opção */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.sub-dropdown.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.profile-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.bx-chevron-right {
+  transition: transform 0.3s ease;
+}
+
+.profile-option.open .bx-chevron-right {
+  transform: rotate(90deg);
+}
+
+
+@media (max-width: 400px) {
+  .dropdown-content {
+    width: 280px; /* Ocupa 90% da largura da tela */
+    left: -210px; /* Ajuste a posição conforme necessário */
+  }
+
+  .content-noti{
+    width: 280px; /* Ocupa 90% da largura da tela */
+    left: -170px;
+  }
 }
 
 .bxs-bell {
@@ -318,7 +363,7 @@ img {
 
 /* Contador de notificações */
 .notification-count {
-  background-color: red;
+  background-color: blue;
   color: white;
   border-radius: 50%;
   font-size: 12px;

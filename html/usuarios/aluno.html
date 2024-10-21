@@ -40,7 +40,7 @@
                   <span class="notification-count">3</span>
                   <i class='bx bxs-bell'></i>
               </div>
-              <div class="dropdown-content" id="notification-content">
+              <div class="dropdown-content content-noti" id="notification-content">
                   <h4>Alertas</h4>
                   <ul>
                       <li>Aviso: Prazo de matrícula termina em 2 dias!</li>
@@ -55,11 +55,32 @@
           </div>
   
           <!-- Perfil -->
-          <div class="dropdown profile-dropdown" style="margin: 0 20px;">
+          <div class="dropdown profile-dropdown" style="margin: 0 15px;">
               <img src="../../assets/img/persona/coqui-chang-COP.jpg" alt="Profile" class="header__img" id="profile-toggle">
               <div class="dropdown-content" id="profile-content">
                   <p>Nome: João Silva</p>
                   <p>Email: joao@email.com</p>
+  
+                  <!-- Sub-dropdown de Configurações -->
+                  <div class="profile-option" id="settings-toggle">
+                      <span>Configurações</span>
+                      <i class='bx bx-chevron-right'></i>
+                  </div>
+                  <div class="sub-dropdown" id="settings-content">
+                      <p>Alterar Senha</p>
+                      <p>Gerenciar Conta</p>
+                  </div>
+  
+                  <!-- Sub-dropdown de Localização -->
+                  <div class="profile-option" id="location-toggle">
+                      <span>Localização</span>
+                      <i class='bx bx-chevron-right'></i>
+                  </div>
+                  <div class="sub-dropdown sub-drop-localiza" id="location-content">
+                      <p>Selecionar Localização</p>
+                      <p>Atualizar Localização</p>
+                  </div>
+  
                   <button class="logout-btn">Logout</button>
               </div>
           </div>
