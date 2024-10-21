@@ -346,14 +346,19 @@ img {
 
 
 @media (max-width: 400px) {
+
+  .notification-dropdown{
+    margin-left: 15px;
+  }
+
   .dropdown-content {
     width: 280px; /* Ocupa 90% da largura da tela */
-    left: -210px; /* Ajuste a posição conforme necessário */
+    left: -200px; /* Ajuste a posição conforme necessário */
   }
 
   .content-noti{
     width: 280px; /* Ocupa 90% da largura da tela */
-    left: -170px;
+    left: -160px;
   }
 }
 
@@ -363,7 +368,7 @@ img {
 
 /* Contador de notificações */
 .notification-count {
-  background-color: blue;
+  background-color: #C0392B;
   color: white;
   border-radius: 50%;
   font-size: 12px;
