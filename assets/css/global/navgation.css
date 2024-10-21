@@ -279,7 +279,7 @@ img {
   display: none;
   position: absolute;
   top: calc(100% + 5px); /* Anima debaixo do elemento */
-  left: -240px; /* Ajuste a posição conforme necessário */
+  left: -245px; /* Ajuste a posição conforme necessário */
   width: 300px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -301,13 +301,13 @@ img {
 .sub-dropdown {
   display: none;
   position: absolute; /* Torna o sub-dropdown independente */
-  top:105px; /* Coloca abaixo da opção */
-  left: 0; /* Alinha à esquerda da opção */
-  width: 200px;
+  top:147px; /* Coloca abaixo da opção */
+  left: 50px; /* Alinha à esquerda da opção */
+  width: 210px;
   background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   /* border-radius: 5px; */
-  padding: 10px;
+  padding: 10px 5px;
   opacity: 0;
   transform: translateY(-10px);
   transition: all 0.3s ease;
@@ -316,8 +316,8 @@ img {
 .sub-drop-localiza{
   background-color: white;
   position: absolute; /* Torna o sub-dropdown independente */
-  top:140px; /* Coloca abaixo da opção */
-  left: 0; /* Alinha à esquerda da opção */
+  top:177px; /* Coloca abaixo da opção */
+  left: 46px; /* Alinha à esquerda da opção */
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -336,6 +336,27 @@ img {
   border-bottom: 1px solid #f0f0f0;
 }
 
+.profile-option:hover .bxs-location-plus {
+  color: #7b83eb;
+  transform: scale(1.2); 
+  transition: all 0.3s ease;
+}
+
+.sub-drop-localiza h6{
+  font-weight: 500;
+  font-size: 12px;
+  color: #b0b0b0;
+}
+
+.sub-drop-localiza p:hover{
+  background-color: #5d5d5d1e;
+}
+
+.sub-drop-localiza p:hover i{
+  color: #7b83eb;
+  transition: all 0.3s ease;
+}
+
 .bx-chevron-right {
   transition: transform 0.3s ease;
 }
@@ -344,6 +365,104 @@ img {
   transform: rotate(90deg);
 }
 
+.flex-conta{
+  display: flex;
+  align-items: center;
+  margin: 20px 0 10px 0;
+}
+
+.flex-conta img{
+  min-width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+}
+
+.flex-conta .box-info-conta{
+  margin-left: 10px;
+}
+
+.flex-conta .box-info-conta h4{
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.flex-conta .box-info-conta p{
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.flex-conta .box-info-conta span a{
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-option{
+  padding: 5px 0 5px 45px;
+}
+
+.profile-option:hover{
+  background-color: #5d5d5d1e;
+}
+
+.profile-option p{
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-option p i{
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.sub-dropdown p{
+  font-size: 13px;
+  margin: 5px 0;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.sub-dropdown p a{
+  font-size: 13.5px;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: rgb(22, 22, 22);
+}
+
+.sub-dropdown p a:hover{
+  background-color: #5d5d5d1e;
+}
+
+.sub-dropdown p i{
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.bxs-check-circle{
+  color: green;
+}
+
+.bxs-circle{
+  color: #b73639;
+}
+
+.bxs-minus-circle{
+  color: #b73639;
+}
+
+.bxs-time-five{
+  color: #eaa300;
+}
+
+.bx-x-circle{
+  color: #707070;
+}
 
 @media (max-width: 400px) {
 
