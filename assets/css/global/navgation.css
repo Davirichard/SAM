@@ -327,6 +327,11 @@ img {
   transform: translateY(0);
 }
 
+.bx-chevron-right{
+  font-size: 20px;
+  color: #58555E;
+}
+
 .profile-option {
   display: flex;
   align-items: center;
