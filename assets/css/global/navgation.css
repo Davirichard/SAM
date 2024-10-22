@@ -271,6 +271,32 @@ img {
   margin-bottom: -6px
 }
 
+.box-flex-notification{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* .box-flex-notification .dados-notification{
+  background-color: yellow;
+} */
+
+.box-flex-notification .dados-notification h6{
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.box-flex-notification .dados-notification p{
+  font-size: 11px;
+}
+
+.box-flex-notification img{
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
 .dropdown {
   position: relative;
 }
@@ -289,6 +315,11 @@ img {
   opacity: 0;
   transform: translateY(-10px);
   transition: all 0.3s ease;
+}
+
+.content-noti{
+    max-height: 200px; /* Defina uma altura máxima */
+    overflow-y: auto; /* Adiciona a barra de rolagem vertical */
 }
 
 .dropdown-content.show {
@@ -312,6 +343,8 @@ img {
   transform: translateY(-10px);
   transition: all 0.3s ease;
 }
+
+
 
 .sub-drop-localiza{
   background-color: white;
