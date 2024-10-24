@@ -286,15 +286,35 @@ img {
   font-weight: 400;
 }
 
+.boximg-noti{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  position: relative;
+}
+
+.boximg-noti .circle-noti{
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+}
+
+.circle-noti i{
+  padding: 5px;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 50%;
+}
+
 .box-flex-notification .dados-notification p{
   font-size: 11px;
 }
 
 .box-flex-notification img{
-  min-width: 40px;
-  height: 40px;
+  min-width: 45px;
+  height: 45px;
   border-radius: 50%;
-  margin-right: 5px;
 }
 
 .dropdown {
@@ -320,6 +340,16 @@ img {
 .content-noti{
     max-height: 200px; /* Defina uma altura máxima */
     overflow-y: auto; /* Adiciona a barra de rolagem vertical */
+}
+
+.content-noti h4{
+  text-align: center;
+  font-size: 14px;
+}
+
+.content-noti ul li{
+  text-align: left;
+  font-size: 13.5px;
 }
 
 .dropdown-content.show {
