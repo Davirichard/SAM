@@ -1,69 +1,66 @@
-// Seleciona os elementos dos dropdowns
-const notificationToggle = document.getElementById('notification-toggle');
-const notificationContent = document.getElementById('notification-content');
+// Evento para exibir a imagem selecionada
+document.getElementById('imagem').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const preview = document.getElementById('imagemPreview');
+    const cancelarButton = document.getElementById('cancelarImagem');
 
-const profileToggle = document.getElementById('profile-toggle');
-const profileContent = document.getElementById('profile-content');
+    if (file) {
+        const reader = new FileReader();
 
-const settingsToggle = document.getElementById('settings-toggle');
-const settingsContent = document.getElementById('settings-content');
+        reader.onload = function(e) {
+            preview.src = e.target.result; // Define a imagem da pré-visualização
+            preview.style.display = 'block'; // Mostra a imagem
+            cancelarButton.style.display = 'inline-block'; // Mostra o botão de cancelar
+        }
 
-const locationToggle = document.getElementById('location-toggle');
-const locationContent = document.getElementById('location-content');
-
-// Função para alternar a visibilidade dos dropdowns
-function toggleDropdown(currentDropdown) {
-    // Fecha todos os dropdowns
-    document.querySelectorAll('.dropdown-content').forEach((dropdown) => {
-        dropdown.classList.remove('show');
-    });
-    // Abre o dropdown atual
-    currentDropdown.classList.toggle('show');
-}
-
-// Função para alternar sub-dropdowns
-function toggleSubDropdown(currentSubDropdown) {
-    const isOpen = currentSubDropdown.classList.contains('show');
-    // Fecha todos os sub-dropdowns
-    document.querySelectorAll('.sub-dropdown').forEach((subDropdown) => {
-        subDropdown.classList.remove('show');
-    });
-    // Abre o sub-dropdown apenas se não estava aberto
-    if (!isOpen) {
-        currentSubDropdown.classList.add('show');
+        reader.readAsDataURL(file); // Lê o arquivo como uma URL de dados
+    } else {
+        preview.src = ''; // Limpa a pré-visualização se nenhum arquivo for selecionado
+        preview.style.display = 'none'; // Esconde a imagem
+        cancelarButton.style.display = 'none'; // Esconde o botão de cancelar
     }
-}
-
-// Abrir/fechar o dropdown de notificações
-notificationToggle.addEventListener('click', (e) => {
-    e.stopPropagation();
-    toggleDropdown(notificationContent);
 });
 
-// Abrir/fechar o dropdown de perfil
-profileToggle.addEventListener('click', (e) => {
-    e.stopPropagation();
-    toggleDropdown(profileContent);
+// Evento para cancelar a imagem selecionada
+document.getElementById('cancelarImagem').addEventListener('click', function() {
+    const imagemInput = document.getElementById('imagem');
+    const preview = document.getElementById('imagemPreview');
+    const cancelarButton = document.getElementById('cancelarImagem');
+
+    imagemInput.value = ''; // Limpa o input de arquivo
+    preview.src = ''; // Limpa a pré-visualização
+    preview.style.display = 'none'; // Esconde a imagem
+    cancelarButton.style.display = 'none'; // Esconde o botão de cancelar
 });
 
-// Abrir/fechar o sub-dropdown de Configurações
-settingsToggle.addEventListener('click', (e) => {
-    e.stopPropagation();
-    toggleSubDropdown(settingsContent);
-});
+// Evento para lidar com o envio do formulário
+document.getElementById('comunicadoForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio do formulário
 
-// Abrir/fechar o sub-dropdown de Localização
-locationToggle.addEventListener('click', (e) => {
-    e.stopPropagation();
-    toggleSubDropdown(locationContent);
-});
+    const titulo = document.getElementById('titulo').value;
+    const corpo = document.getElementById('corpo').value;
+    const destinatarios = Array.from(document.getElementById('destinatarios').selectedOptions).map(option => option.value);
+    const imagem = document.getElementById('imagem').files[0];
+    const alerta = document.getElementById('alerta').checked;
+    const notificacaoChat = document.getElementById('notificacaoChat').checked;
 
-// Fecha todos os dropdowns ao clicar fora
-document.addEventListener('click', () => {
-    document.querySelectorAll('.dropdown-content').forEach((dropdown) => {
-        dropdown.classList.remove('show');
-    });
-    document.querySelectorAll('.sub-dropdown').forEach((subDropdown) => {
-        subDropdown.classList.remove('show');
-    });
+    // Mensagem de sucesso
+    let mensagem = `Comunicação enviada com sucesso!\nTítulo: ${titulo}\nDestinatários: ${destinatarios.join(', ')}`;
+    
+    if (imagem) {
+        mensagem += `\nImagem anexada: ${imagem.name}`;
+    }
+
+    if (alerta) {
+        mensagem += `\nALERTA IMPORTANTE: Esta comunicação é urgente!`;
+    }
+
+    if (notificacaoChat) {
+        mensagem += `\nNotificação enviada para o chat.`;
+    }
+
+    document.getElementById('mensagem').innerText = mensagem;
+
+    // Limpa o formulário
+    document.getElementById('comunicadoForm').reset();
 });
