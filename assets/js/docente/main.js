@@ -1,58 +1,53 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Conta o número de cards existentes
   const cardWrapper = document.querySelector('.card-wrapper');
   const numberOfCards = cardWrapper.querySelectorAll('.card').length;
 
-  // Função para aplicar os estilos para menos de 3 cards
   function applyCustomStyles() {
     const cards = document.querySelectorAll('.card');
 
     if (numberOfCards === 1) {
-      // Caso haja 1 card, ele deve ser centralizado
       cards.forEach(card => {
-        card.style.maxWidth = '300px'; // Define a largura máxima
-        card.style.margin = '10px auto'; // Centraliza o card com margem automática
+        card.style.maxWidth = '300px';
+        card.style.margin = '10px auto';
       });
       cardWrapper.style.display = 'flex';
-      cardWrapper.style.justifyContent = 'center'; // Centraliza o único card
-      cardWrapper.style.flexDirection = 'column'; // Garante que o card esteja em coluna
+      cardWrapper.style.justifyContent = 'center';
+      cardWrapper.style.alignItems = 'center'; // Centraliza verticalmente
+      cardWrapper.style.flexDirection = 'column';
     } else if (numberOfCards === 2) {
-      // Caso haja 2 cards, centralizamos os dois cards
       cards.forEach(card => {
-        card.style.width = '45%'; // Largura menor para os dois cards
+        card.style.width = '45%';
         card.style.margin = '10px';
       });
       cardWrapper.style.display = 'flex';
-      cardWrapper.style.justifyContent = 'center'; // Centraliza os dois cards
+      cardWrapper.style.justifyContent = 'center';
     } else {
-      // Caso haja 3 ou mais cards
       cards.forEach(card => {
         card.style.width = '30%';
         card.style.margin = '10px';
       });
       cardWrapper.style.display = 'flex';
-      cardWrapper.style.justifyContent = 'space-between'; // Mantém o comportamento anterior
+      cardWrapper.style.justifyContent = 'space-between';
     }
 
-    // Responsividade: ao reduzir a tela, os cards ficam um abaixo do outro
     window.addEventListener('resize', function() {
       if (window.innerWidth <= 768) {
         cards.forEach(card => {
-          card.style.width = '100%'; // Largura 100%
-          card.style.margin = '10px 0'; // Margem entre os cards
+          card.style.width = '100%';
+          card.style.margin = '10px 0';
         });
-        cardWrapper.style.flexDirection = 'column'; // Coloca os cards em coluna
-        cardWrapper.style.justifyContent = 'center'; // Centraliza cards em coluna
+        cardWrapper.style.flexDirection = 'column';
+        cardWrapper.style.justifyContent = 'center';
+        cardWrapper.style.alignItems = 'center';
       } else {
-        cardWrapper.style.flexDirection = 'row'; // Volta ao layout original
+        cardWrapper.style.flexDirection = 'row';
 
-        // Ajusta os estilos dependendo do número de cards
         if (numberOfCards === 1) {
           cards.forEach(card => {
             card.style.width = '100%';
             card.style.margin = '10px 0';
           });
-          cardWrapper.style.justifyContent = 'center'; // Centraliza o único card
+          cardWrapper.style.justifyContent = 'center';
         } else if (numberOfCards === 2) {
           cards.forEach(card => {
             card.style.width = '45%';
@@ -67,36 +62,32 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
 
-    // Configuração inicial para telas menores
     if (window.innerWidth <= 768) {
       cards.forEach(card => {
         card.style.width = '100%';
         card.style.margin = '10px 0';
       });
-      cardWrapper.style.flexDirection = 'column'; // Cards ficam um abaixo do outro
-      cardWrapper.style.justifyContent = 'center'; // Centraliza em coluna
-      cardWrapper.style.alignItems = 'center'; // Garante que os cards estão alinhados ao centro
+      cardWrapper.style.flexDirection = 'column';
+      cardWrapper.style.justifyContent = 'center';
+      cardWrapper.style.alignItems = 'center';
     }
   }
 
-  // Função para remover os estilos personalizados
   function removeCustomStyles() {
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
-      card.style.width = ''; // Remove a largura personalizada
-      card.style.margin = ''; // Remove a margem personalizada
+      card.style.width = '';
+      card.style.margin = '';
     });
-    cardWrapper.style.display = ''; // Remove o display flex aplicado
-    cardWrapper.style.justifyContent = ''; // Remove o justify-content
-    cardWrapper.style.flexWrap = ''; // Remove o flex-wrap
-    cardWrapper.style.flexDirection = ''; // Remove o flexDirection aplicado
-    cardWrapper.style.alignItems = ''; // Remove alinhamento
+    cardWrapper.style.display = '';
+    cardWrapper.style.justifyContent = '';
+    cardWrapper.style.flexWrap = '';
+    cardWrapper.style.flexDirection = '';
+    cardWrapper.style.alignItems = '';
   }
 
-  // Se houver mais de 3 cards, inicializa o Swiper normalmente
   if (numberOfCards > 3) {
-    removeCustomStyles(); // Remove qualquer estilo dinâmico aplicado
-
+    removeCustomStyles();
     var swiper = new Swiper(".slider-content", {
       slidesPerView: 3,
       spaceBetween: 25,
@@ -126,13 +117,9 @@ document.addEventListener("DOMContentLoaded", function() {
       },
     });
   } else {
-    // Aplicar estilos especiais para menos de 3 cards
     applyCustomStyles();
-
-    // Esconder botões de navegação e paginação
     document.querySelector('.swiper-button-next').style.display = 'none';
     document.querySelector('.swiper-button-prev').style.display = 'none';
     document.querySelector('.swiper-pagination').style.display = 'none';
   }
 });
-

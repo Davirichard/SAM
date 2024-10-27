@@ -239,23 +239,23 @@
         <main>
             <section class="formulario-flex">
                 <div class="box-left">
-                    <img src="assets/img/cursos/criar/11285789.jpg" alt="">
+                    <img src="assets/img/comunicado/4782264-min.jpg" alt="">
                 </div>
                 <form action="" method="get" class="form-container">
                     <!-- Primeiro grupo de inputs -->
                     <fieldset class="step active">
                         <div class="box-legend">
-                            <legend class="legend1">Titulo do comunicado </legend>
+                            <legend class="legend1">Título do comunicado </legend>
                             <div class="line-legend line1"></div>
                         </div>
                         <div class="box-inputs">
-                            <input type="text" id="titulo" name="titulo"  placeholder="Digite o titulo do seu comunicado" required>
+                            <input type="text" id="titulo" name="titulo" placeholder="Digite o título do comunicado" required>
                         </div>
                         <div class="box-buttons">
                             <button type="button" class="next">Próximo</button>
                         </div>
                     </fieldset>
-            
+                
                     <!-- Segundo grupo de inputs -->
                     <fieldset class="step">
                         <div class="box-legend">
@@ -263,28 +263,29 @@
                             <div class="line-legend line2"></div>
                         </div>
                         <div class="box-inputs">
-                            <textarea id="corpo"required></textarea>
+                            <textarea id="corpo" placeholder="Exemplo: Informamos que as aulas presenciais retornarão a partir da próxima segunda-feira, seguindo todos os protocolos de segurança. Por favor, venham com máscara e tragam seu próprio material de estudo. Contamos com a colaboração de todos." required></textarea>
                         </div>
                         <div class="box-buttons">
                             <button type="button" class="prev">Voltar</button>
                             <button type="button" class="next">Próximo</button>
                         </div>
                     </fieldset>
-            
+                
                     <!-- Terceiro grupo de inputs -->
                     <fieldset class="step">
                         <div class="box-legend">
                             <legend class="legend3">Adicionar Imagem</legend>
                             <div class="line-legend line3"></div>
                         </div>
-                        
                         <div class="box-inputs">
                             <div class="input">
-                                <input type="file" id="imagem" accept="image/*">
+                                <input type="file" id="imagem" accept="image/*" style="display: none;">
+                                <label for="imagem" class="upload-button"><i class='bx bxl-dropbox bx-tada' ></i>Selecione uma imagem</label>
                             </div>
+                            
                             <!-- Elemento para mostrar a imagem selecionada -->
-                            <div class="image-preview" style="margin-top: 10px;">
-                                <img id="imagemPreview" src="" alt="Pré-visualização da Imagem" style="display: none; max-width: 100%; height: auto;" />
+                            <div class="image-preview">
+                                <img id="imagemPreview" src="" alt="Pré-visualização da Imagem">
                             </div>
                         </div>
                         <div class="box-buttons">
@@ -293,22 +294,18 @@
                             <button type="button" class="next">Próximo</button>
                         </div>
                     </fieldset>
-                    
-                    
-            
+                
                     <!-- Quarto grupo de inputs -->
                     <fieldset class="step">
                         <div class="box-legend">
                             <legend class="legend4">Tipo de comunicado</legend>
                             <div class="line-legend line4"></div>
                         </div>
-                       
                         <div class="box-inputs">
                             <div class="input">
                                 <label for="alerta">Marcar como Alerta Importante:</label>
                                 <input type="checkbox" id="alerta">
                             </div>
-
                             <div class="input">
                                 <label for="notificacaoChat">Notificar no Chat:</label>
                                 <input type="checkbox" id="notificacaoChat">
@@ -319,14 +316,13 @@
                             <button type="button" class="next">Próximo</button>
                         </div>
                     </fieldset>
-            
+                
                     <!-- Quinto grupo de inputs -->
                     <fieldset class="step">
                         <div class="box-legend">
                             <legend class="legend5">Destinatários</legend>
                             <div class="line-legend line5"></div>
                         </div>
-                       
                         <div class="box-inputs">
                             <div class="input">
                                 <label for="destinatarios">Destinatários:</label>
@@ -337,7 +333,6 @@
                                     <option value="funcionarios">Funcionários</option>
                                 </select>
                             </div>
-                            
                         </div>
                         <div class="box-buttons">
                             <button type="button" class="prev">Voltar</button>
@@ -345,6 +340,7 @@
                         </div>
                     </fieldset>
                 </form>
+                
             </section>
         </main>
 
