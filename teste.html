@@ -304,11 +304,21 @@
                         <div class="box-inputs">
                             <div class="input">
                                 <label for="alerta">Marcar como Alerta Importante:</label>
-                                <input type="checkbox" id="alerta">
+                                <!-- <input type="checkbox" id="alerta"> -->
+                                <!-- Informações adicionais -->
+                                <div class="extra-info">
+                                    <p>Confirma que deseja marcar como Alerta Importante?</p>
+                                    <label for="confirmAlerta" style="display: flex; align-items: center;">Confirmar<input type="checkbox" id="confirmAlerta"></label>
+                                </div>
                             </div>
                             <div class="input">
                                 <label for="notificacaoChat">Notificar no Chat:</label>
-                                <input type="checkbox" id="notificacaoChat">
+                                
+                                <!-- Informações adicionais -->
+                                <div class="extra-info">
+                                    <p>Deseja realmente notificar no chat?</p>
+                                    <label for="confirmNotificacaoChat" style="display: flex; align-items: center;">Confirmar<input type="checkbox" id="confirmNotificacaoChat"></label>
+                                </div>
                             </div>
                         </div>
                         <div class="box-buttons">
@@ -316,7 +326,7 @@
                             <button type="button" class="next">Próximo</button>
                         </div>
                     </fieldset>
-                
+                    
                     <!-- Quinto grupo de inputs -->
                     <fieldset class="step">
                         <div class="box-legend">
@@ -348,5 +358,13 @@
     <script src="assets/js/global/navgation.js"></script>
     <script src="assets/js/global/dropdown.js"></script>
     <script src="teste.js"></script>
+    <script>
+        document.querySelectorAll('.input').forEach(input => {
+    input.addEventListener('click', function() {
+        // Alterna a visibilidade do conteúdo extra
+        this.classList.toggle('active');
+    });
+});
+    </script>
 </body>
 </html>

@@ -143,6 +143,35 @@ form input,textarea{
     background-color: #a17e00; /* Cor de hover */
 }
 
+.input {
+    position: relative;
+}
+
+.extra-info {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: #ebebeb;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.input.active .extra-info {
+    display: block;
+    opacity: 1;
+}
+
+.extra-info #confirmNotificacaoChat{
+    box-shadow: none;
+}
+
+input[type="checkbox"] {
+    width: 16px; /* Ajuste o valor conforme necessário */
+}
+
+
 .image-preview {
     margin-top: 10px;
     display: flex;
