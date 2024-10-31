@@ -237,125 +237,83 @@
         </div>
 
         <main>
-            <section class="formulario-flex">
-                <div class="box-left">
+            <div class="global-flex">
+                <div class="box-img-left">
                     <img src="assets/img/comunicado/4782264-min.jpg" alt="">
                 </div>
-                <form action="" method="get" class="form-container">
-                    <!-- Primeiro grupo de inputs -->
-                    <fieldset class="step active">
-                        <div class="box-legend">
-                            <legend class="legend1">Título do comunicado </legend>
-                            <div class="line-legend line1"></div>
+                <div class="form-container">
+                    <form id="comunicadoForm">
+                      <!-- Etapa 1: Título -->
+                      <fieldset class="step">
+                        <label for="titulo">Título do Comunicado:</label>
+                        <input type="text" id="titulo" name="titulo"  placeholder="Digite o título do comunicado" required>
+                        <button type="button" class="next">Próximo</button>
+                      </fieldset>
+                      
+                      <!-- Etapa 2: Corpo do Comunicado -->
+                      <fieldset class="step">
+                        <label for="corpo">Corpo do Comunicado:</label>
+                        <textarea id="corpo" name="corpo" required></textarea>
+                        <button type="button" class="back">Voltar</button>
+                        <button type="button" class="next">Próximo</button>
+                      </fieldset>
+                  
+                      <!-- Etapa 3: Adicionar Imagem -->
+                      <fieldset class="step">
+                        <label for="imagem">Imagem (opcional):</label>
+                        <input type="file" id="imagem" accept="image/*" onchange="previewImage(event)">
+                        <div id="imagePreviewContainer">
+                          <img id="imagePreview" src="" alt="Pré-visualização da Imagem" style="display: none;">
                         </div>
-                        <div class="box-inputs">
-                            <input type="text" id="titulo" name="titulo" placeholder="Digite o título do comunicado" required>
+                        <button type="button" class="back">Voltar</button>
+                        <button type="button" class="next">Próximo</button>
+                      </fieldset>
+                  
+                      <!-- Etapa 4: Tipo de Comunicado -->
+                      <fieldset class="step">
+                        <label>Tipo de Comunicado:</label>
+                  
+                        <!-- Alerta Importante -->
+                        <label for="alerta">Marcar como Alerta Importante:</label>
+                        <div id="infoExtraAlerta" class="extra-info" style="display: none;">
+                          <p>Você está prestes a marcar este comunicado como "Alerta Importante". Isso significa que a mensagem terá prioridade e será destacada para os destinatários, garantindo que todos vejam a informação com urgência. Você realmente deseja prosseguir com essa marcação?</p>
+                          <div class="box-flex-comunicado">
+                            <label for="confirmAlerta" class="confirm-label">Confirmar</label>
+                            <input type="checkbox" id="confirmAlerta" name="confirmAlerta">
+                          </div>
                         </div>
-                        <div class="box-buttons">
-                            <button type="button" class="next">Próximo</button>
+                  
+                        <!-- Postar no Chat -->
+                        <label for="chat">Postar no Chat:</label>
+                        <div id="infoExtraChat" class="extra-info" style="display: none;">
+                          <p>Ao marcar esta opção, o comunicado será postado diretamente no chat do sistema, tornando-o visível para todos os usuários conectados. Confirme se deseja publicar este comunicado no chat.</p>
+                          <div class="box-flex-comunicado">
+                            <label for="confirmChat" class="confirm-label">Confirmar</label>
+                            <input type="checkbox" id="confirmChat" name="confirmChat">
+                          </div>
                         </div>
-                    </fieldset>
-                
-                    <!-- Segundo grupo de inputs -->
-                    <fieldset class="step">
-                        <div class="box-legend">
-                            <legend class="legend2">Corpo do Comunicado</legend>
-                            <div class="line-legend line2"></div>
-                        </div>
-                        <div class="box-inputs">
-                            <textarea id="corpo" placeholder="Exemplo: Informamos que as aulas presenciais retornarão a partir da próxima segunda-feira, seguindo todos os protocolos de segurança. Por favor, venham com máscara e tragam seu próprio material de estudo. Contamos com a colaboração de todos." required></textarea>
-                        </div>
-                        <div class="box-buttons">
-                            <button type="button" class="prev">Voltar</button>
-                            <button type="button" class="next">Próximo</button>
-                        </div>
-                    </fieldset>
-                
-                    <!-- Terceiro grupo de inputs -->
-                    <fieldset class="step">
-                        <div class="box-legend">
-                            <legend class="legend3">Adicionar Imagem</legend>
-                            <div class="line-legend line3"></div>
-                        </div>
-                        <div class="box-inputs">
-                            <div class="input">
-                                <input type="file" id="imagemInput" accept="image/*" style="display: none;">
-                                <label for="imagemInput" class="upload-button"><i class='bx bxl-dropbox bx-tada'></i>Selecione uma imagem</label>
-                            </div>
-                            
-                            <!-- Elemento para mostrar a imagem selecionada -->
-                            <div class="image-preview">
-                                <img id="imagemPreview" src="" alt="Pré-visualização da Imagem" style="display: none;">
-                            </div>
-                        </div>
-                        <div class="box-buttons">
-                            <button type="button" id="cancelarImagemButton" style="display: none;">Cancelar Imagem</button>
-                            <button type="button" class="prev">Voltar</button>
-                            <button type="button" class="next">Próximo</button>
-                        </div>
-                    </fieldset>
-
-                    <!-- Quarto grupo de inputs -->
-                    <fieldset class="step">
-                        <div class="box-legend">
-                            <legend class="legend4">Tipo de comunicado</legend>
-                            <div class="line-legend line4"></div>
-                        </div>
-                        <div class="box-inputs">
-                            <div class="input">
-                                <label for="alerta">Marcar como Alerta Importante:</label>
-                                <div class="extra-info">
-                                    <p>Você está prestes a marcar este comunicado como "Alerta Importante". Isso significa que a mensagem terá prioridade e será destacada para os destinatários, garantindo que todos vejam a informação com urgência. Você realmente deseja prosseguir com essa marcação?</p>
-                                    <div class="box-flex-comunicado">
-                                        <label for="confirmAlerta" class="confirm-label">Confirmar</label>
-                                        <input type="checkbox" id="confirmAlerta">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="input">
-                                <label for="notificacaoChat">Notificar no Chat:</label>
-                                <div class="extra-info">
-                                    <p>Você está prestes a notificar os usuários no chat, mas essa notificação será enviada apenas aos destinatários selecionados. Isso significa que, dependendo da sua escolha (professores, alunos, funcionários ou todos), a mensagem será enviada a esses grupos específicos. Você deseja prosseguir com essa notificação?</p>
-                                    <div class="box-flex-comunicado">
-                                        <label for="confirmNotificacaoChat" class="confirm-label">Confirmar</label>
-                                        <input type="checkbox" id="confirmNotificacaoChat">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-buttons">
-                            <button type="button" class="prev">Voltar</button>
-                            <button type="button" class="next">Próximo</button>
-                        </div>
-                    </fieldset>
-
-
-                    
-                    <!-- Quinto grupo de inputs -->
-                    <fieldset class="step">
-                        <div class="box-legend">
-                            <legend class="legend5">Destinatários</legend>
-                            <div class="line-legend line5"></div>
-                        </div>
-                        <div class="box-inputs">
-                            <div class="input">
-                                <label for="destinatarios">Destinatários:</label>
-                                <select id="destinatarios" multiple required>
-                                    <option value="todos">Todos</option>
-                                    <option value="professores">Professores</option>
-                                    <option value="alunos">Alunos</option>
-                                    <option value="funcionarios">Funcionários</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="box-buttons">
-                            <button type="button" class="prev">Voltar</button>
-                            <button type="submit" class="salvar">Enviar comunicado</button>
-                        </div>
-                    </fieldset>
-                </form>
-                
-            </section>
+                  
+                        <button type="button" class="back">Voltar</button>
+                        <button type="button" class="next">Próximo</button>
+                      </fieldset>
+                  
+                      <!-- Etapa 5: Destinatário -->
+                      <fieldset class="step">
+                        <label>Destinatário:</label>
+                        <select name="destinatario" required>
+                          <option value="todos">Todos</option>
+                          <option value="professores">Professores</option>
+                          <option value="alunos">Alunos</option>
+                          <option value="coordenadores">Coordenadores</option>
+                        </select>
+                        <button type="button" class="back">Voltar</button>
+                        <button type="submit">Publicar Comunicado</button>
+                      </fieldset>
+                  
+                    </form>
+                  </div>
+                  
+            </div><!--global-flex-->
         </main>
 
     <script src="assets/js/cursos/criar.js"></script>
