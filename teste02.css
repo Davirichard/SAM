@@ -1,133 +1,43 @@
-
-main{
-    padding: 50px 20px;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
 }
-        h1 {
-            color: #333;
-        }
 
-        .container {
-            max-width: 800px;
-            width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
 
-        .section {
-            margin-bottom: 20px;
-        }
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
 
-        .section label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-        /* Selectores e input */
-        input[type="checkbox"] {
-            margin-right: 10px;
-        }
+.modal-navigation {
+    margin: 20px 0;
+}
 
-        select, input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        /* Botões */
-        button {
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .btn-submit {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        .btn-clear {
-            background-color: #f44336;
-            color: white;
-        }
-
-
-        #userList {
-        max-height: 200px; /* Ajuste a altura máxima conforme necessário */
-        overflow-y: auto;  /* Adiciona a barra de rolagem vertical */
-        border: 1px solid #ccc; /* Adiciona uma borda para delimitar a área */
-        padding: 10px; /* Espaçamento interno */
-        margin-top: 10px; /* Espaçamento superior */
-    }
-
-    .user-item {
-        margin-bottom: 10px; /* Espaçamento entre os itens da lista */
-        padding: 5px;
-        background-color: #f9f9f9; /* Fundo leve para os itens */
-        border: 1px solid #ddd; /* Borda leve para os itens */
-        border-radius: 5px; /* Cantos arredondados */
-    }
-
-    .user-modal {
-        display: none; /* Escondido por padrão */
-        position: absolute;
-        background-color: white;
-        border: 1px solid #ccc;
-        padding: 10px;
-        z-index: 10;
-        top: -20px;
-        right: 30px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    .user-item:hover .user-modal {
-        display: block; /* Mostra ao passar o mouse */
-    }
-
-    
-
-    .document-dropdown {
-        position: relative;
-        width: 100%;
-    }
-    
-    .document-selected {
-        background: #f0f0f0;
-        padding: 10px;
-        cursor: pointer;
-        border: 1px solid #ccc;
-    }
-    
-    .document-options {
-        display: none; /* Ocultar inicialmente */
-        position: absolute;
-        top: 100%; /* Posicionar abaixo do selected */
-        left: 0;
-        right: 0;
-        max-height: 100px; /* Altura máxima */
-        overflow-y: auto; /* Rolagem vertical */
-        border: 1px solid #ccc;
-        background: white;
-        z-index: 1000;
-    }
-    
-    .document-dropdown:hover .document-options,
-    .document-dropdown:focus-within .document-options {
-        display: block; /* Mostrar opções ao passar o mouse ou focar */
-    }
-    
-    .document-options div {
-        padding: 10px;
-        cursor: pointer;
-    }
-    
-    .document-options div:hover {
-        background: #e0e0e0; /* Efeito hover nas opções */
-    }
-    
+.nav-button {
+    margin-right: 10px;
+    padding: 10px;
+    cursor: pointer;
+}

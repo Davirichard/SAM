@@ -9,14 +9,13 @@ main .global-flex-doc{
 
 .global-flex-doc .left-img-doc{
     width: 50%;
-    background-color: #fefaee;
+    background-color: #7f7dfb7c;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .global-flex-doc .left-img-doc img{
-    width: 100%;
     height: 500px;
     object-fit: cover;
 }
@@ -28,6 +27,13 @@ main .global-flex-doc{
     width: 50%;
     height: 500px;
     overflow-y: auto;
+}
+
+#specificUserFilter input{
+    background-color: none;
+    height: 0;
+    border: none;
+    box-shadow: none;
 }
 
 input[type="text"]{
