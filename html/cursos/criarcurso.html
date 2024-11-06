@@ -262,9 +262,24 @@
                             <input type="text" id="codigo" name="codigo" placeholder="Digite o código do curso" required>
                         </div>
                         <div class="input">
-                            <label for="departamento">Departamento:</label>
-                            <input type="text" id="departamento" name="departamento" placeholder="Digite o departamento" required>
+                            <label for="dias-curso">Dias de Aula:</label>
+                            <select id="dias-curso" name="dias-curso" required>
+                                <option value="">Selecione os dias</option>
+                                <option value="segunda-feira">Segunda-feira</option>
+                                <option value="terça-feira">Terça-feira</option>
+                                <option value="quarta-feira">Quarta-feira</option>
+                                <option value="quinta-feira">Quinta-feira</option>
+                                <option value="sexta-feira">Sexta-feira</option>
+                                <option value="sabado">Sábado</option>
+                                <option value="domingo">Domingo</option>
+                                <option value="segunda-quarta-sexta">Segunda, Quarta e Sexta</option>
+                                <option value="terça-quinta">Terça e Quinta</option>
+                                <option value="segunda-sexta">Segunda e Sexta</option>
+                                <option value="segunda-terça-quarta-quinta-sexta">Segunda a Sexta (todos os dias úteis)</option>
+                                <option value="sabado-domingo">Sábado e Domingo</option>
+                            </select>
                         </div>
+                        
                         <div class="input input-right">
                             <label for="carga-horaria">Carga Horária:</label>
                             <input type="number" id="carga-horaria" name="carga-horaria" placeholder="Ex: 40h" min="1" required>
@@ -374,6 +389,102 @@
                         <button type="button" class="next">Próximo</button>
                     </div>
                 </fieldset>
+
+                <fieldset class="step">
+                    <div class="box-legend">
+                        <legend class="legend-img">Personalização</legend>
+                        <div class="line-legend line-img"></div>
+                    </div>
+                   
+                    <div class="box-img-curso">
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img1.jpg" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img2.jpg" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img3.jpg" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img4.jpg" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img5.jpg" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img6.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img7.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img8.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img9.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img10.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img11.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img12.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img13.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img14.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img15.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img16.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img17.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img18.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img19.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img20.jpg" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img21.PNG" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img22.jpg" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img23.jpg" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img24.jpg" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img25.jpg" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img26.jpg" alt="">
+                        </div>
+                        <div class="box-img">
+                            <img src="../../assets/img/cursos/img-criar-curso/img27.PNG" alt="">
+                        </div>
+
+                    </div>
+                    <div class="box-buttons">
+                        <button type="button" class="prev">Voltar</button>
+                        <button type="button" class="next">Próximo</button>
+                    </div>
+                </fieldset>
         
                 <!-- Quinto grupo de inputs -->
                 <fieldset class="step">
@@ -411,6 +522,25 @@
             </form>
         </section>
     </main>
+
+    <script>
+        // Seleciona todas as caixas de imagem
+const boxes = document.querySelectorAll('.box-img');
+
+// Função para remover a classe 'selected' de todas as caixas de imagem
+function removeSelected() {
+    boxes.forEach(box => box.classList.remove('selected'));
+}
+
+// Adiciona o evento de clique para cada caixa de imagem
+boxes.forEach(box => {
+    box.addEventListener('click', () => {
+        removeSelected();  // Remove a seleção de qualquer outra caixa
+        box.classList.add('selected');  // Adiciona a borda à caixa clicada
+    });
+});
+
+    </script>
 
     <script src="../../assets/js/cursos/criar.js"></script>
     <script src="../../assets/js/global/navgation.js"></script>
