@@ -169,7 +169,11 @@ fieldset legend{
     outline: none;
 }
 
-select,input,textarea{
+select{
+    background-color: white;
+}
+
+input[type="date"]{
     background-color: white;
 }
 
