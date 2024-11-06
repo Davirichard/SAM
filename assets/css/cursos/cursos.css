@@ -169,6 +169,10 @@ fieldset legend{
     outline: none;
 }
 
+select,input,textarea{
+    background-color: white;
+}
+
 .input input::placeholder{
     font-size: 12px;
 }
