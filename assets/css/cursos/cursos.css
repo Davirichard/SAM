@@ -248,7 +248,7 @@ button:hover {
 
 
 .box-img-curso{
-    background-color: #ebebeb;
+    background-color: #f1f1f198;
     display: flex;
     overflow-y: scroll;
     flex-wrap: wrap;
@@ -262,6 +262,7 @@ button:hover {
     margin: 10px 5px;
     cursor: pointer;
     border-radius: 5px;
+    border: 2px solid transparent;
 }
 
 .box-img-curso .box-img:hover{
