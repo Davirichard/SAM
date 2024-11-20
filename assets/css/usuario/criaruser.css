@@ -262,7 +262,7 @@ button:hover {
 
     .form-container {
         width: 80%;
-        background: #fff;
+        background: white;
         border-radius: 0 0 15px 15px;
         padding: 20px;
         /* border-radius: 8px; */
@@ -272,6 +272,11 @@ button:hover {
         justify-content: center;
         align-items: center; */
     }
+
+    /* .fieldset-quinto{
+        height: auto;
+        min-height: 410px;
+    } */
 
     .box-left{
         width: 80%;
