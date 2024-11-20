@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Enquete - SAM</title>
+    <link rel="stylesheet" href="../../assets/css/secretaria/criar-enquete.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Criar Enquete</h1>
+    </div>
+</header>
+
+<main class="container">
+    <form id="create-survey">
+        <!-- Título da Enquete -->
+        <label for="survey-title">Título da Enquete</label>
+        <input type="text" id="survey-title" placeholder="Digite o título da enquete" required>
+
+        <!-- Descrição -->
+        <label for="survey-description">Descrição</label>
+        <textarea id="survey-description" rows="4" placeholder="Descreva o propósito da enquete" required></textarea>
+
+        <!-- Opções de Resposta -->
+        <section class="response-options">
+            <h2>Opções de Resposta</h2>
+            <ul id="options-list">
+                <li>
+                    <input type="text" class="option-input" placeholder="Digite uma opção" required>
+                    <button type="button" class="btn-remove">Remover</button>
+                </li>
+            </ul>
+            <button type="button" id="add-option" class="btn-add">Adicionar Nova Opção</button>
+        </section>
+
+        <!-- Botões de Ação -->
+        <div class="form-actions">
+            <button type="submit" class="btn-submit">Criar Enquete</button>
+            <button type="reset" class="btn-cancel">Cancelar</button>
+        </div>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2024 Sistema Acadêmico Moderno - Todos os direitos reservados.</p>
+</footer>
+
+<script src="../../assets/js/secretaria/criar-enquete.js"></script>
+</body>
+</html>
