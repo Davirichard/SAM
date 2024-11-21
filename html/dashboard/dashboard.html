@@ -293,49 +293,9 @@
                     </section>
                     <section class="section-registro">
                         <h3>Últimos registros</h3>
-                        <div class="table-container">
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>Nome</th>
-                                  <th>Matrícula</th>
-                                  <th>Gênero</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td data-label="Nome">Ana Souza</td>
-                                  <td data-label="Matrícula">20231001</td>
-                                  <td data-label="Gênero">Feminino</td>
-                                </tr>
-                                <tr>
-                                  <td data-label="Nome">Carlos Santos</td>
-                                  <td data-label="Matrícula">20231002</td>
-                                  <td data-label="Gênero">Masculino</td>
-                                </tr>
-                                <tr>
-                                  <td data-label="Nome">Mariana Oliveira</td>
-                                  <td data-label="Matrícula">20231003</td>
-                                  <td data-label="Gênero">Feminino</td>
-                                </tr>
-                                <tr>
-                                    <td data-label="Nome">Ana Souza</td>
-                                    <td data-label="Matrícula">20231001</td>
-                                    <td data-label="Gênero">Feminino</td>
-                                  </tr>
-                                  <tr>
-                                    <td data-label="Nome">Carlos Santos</td>
-                                    <td data-label="Matrícula">20231002</td>
-                                    <td data-label="Gênero">Masculino</td>
-                                  </tr>
-                                  <tr>
-                                    <td data-label="Nome">Mariana Oliveira</td>
-                                    <td data-label="Matrícula">20231003</td>
-                                    <td data-label="Gênero">Feminino</td>
-                                  </tr>
-                              </tbody>
-                            </table>
-                          </div>
+                        <div class="box-grifico">
+                            <canvas id="grafico1"></canvas>
+                        </div>
                     </section>
                 </div><!--container-content-->
             </main>
@@ -376,7 +336,7 @@
                                 <p>RM:<span>000-00-000</span></p>
                             </div>
                         </div><!--aluno-->
-                        <button>Ver todos</button>
+                        <button class="button-notificar">Notificar</button>
                     </div>
                 </section>
 
@@ -415,7 +375,7 @@
                                 <p>RM:<span>000-00-000</span></p>
                             </div>
                         </div><!--aluno-->
-                        <button>Ver todos</button>
+                        <button class="button-notificar">Notificar</button>
                     </div>
                 </section>
 
@@ -437,5 +397,6 @@
         <script src="../../assets/js/dashboard/dashboard.js"></script>
         <script src="../../assets/js/dashboard/navdash.js"></script>
         <script src="../../assets/js/global/dropdown.js"></script>
+        <script src="../../assets/js/dashboard/grafico.js"></script>
 </body>
 </html>
